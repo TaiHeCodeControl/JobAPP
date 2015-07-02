@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray" >
+
+    <include
+        android:id="@+id/setting_accountsafe_caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/home_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setting_accountsafe_caption"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none"
+        android:requiresFadingEdge="none"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="@color/background_gray" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dip"
+                    android:text="@string/account"
+                    android:textColor="@color/darkgray"
+                    android:textSize="17.0sp" />
+            </RelativeLayout>
+
+            <!-- 微信号  block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_wechate_block"
+                android:layout_width="match_parent"
+                android:layout_height="50dip" >
+
+                <ImageView
+                    android:id="@+id/wechate_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:contentDescription="@string/img_description"
+                    android:src="@drawable/safeguard_icon"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_wechate_text_block"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_toRightOf="@id/wechate_icon" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/wechat"
+                        android:textColor="@color/darkgray"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@+id/wechate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dip"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="17.0sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/personalinfo_list_divider_color" />
+            </RelativeLayout>
+
+            <!-- QQ号  block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_QQ_block"
+                android:layout_width="match_parent"
+                android:layout_height="50dip" >
+
+                <ImageView
+                    android:id="@+id/QQ_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:contentDescription="@string/img_description"
+                    android:src="@drawable/safeguard_icon"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_QQ_text_block"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_toRightOf="@id/QQ_icon" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/qq"
+                        android:textColor="@color/darkgray"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@+id/QQ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dip"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="17.0sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/personalinfo_list_divider_color" />
+            </RelativeLayout>
+            <!-- 手机号  block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_tell_block"
+                android:layout_width="match_parent"
+                android:layout_height="50dip" >
+
+                <ImageView
+                    android:id="@+id/tell_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:contentDescription="@string/img_description"
+                    android:src="@drawable/safeguard_icon"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_tell_text_block"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_toRightOf="@id/tell_icon" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/tell"
+                        android:textColor="@color/darkgray"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@+id/tell"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dip"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="17.0sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/personalinfo_list_divider_color" />
+            </RelativeLayout>
+            <!-- 邮箱地址  block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_email_block"
+                android:layout_width="match_parent"
+                android:layout_height="50dip" >
+
+                <ImageView
+                    android:id="@+id/email_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:contentDescription="@string/img_description"
+                    android:src="@drawable/safeguard_icon"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_email_text_block"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_toRightOf="@id/email_icon" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/email"
+                        android:textColor="@color/darkgray"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@+id/email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dip"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="17.0sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="@color/background_gray" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dip"
+                    android:text="@string/safe"
+                    android:textColor="@color/darkgray"
+                    android:textSize="17.0sp" />
+            </RelativeLayout>
+            <!-- 账号密码  block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_account_pwd_block"
+                android:layout_width="match_parent"
+                android:layout_height="50dip" >
+
+                <ImageView
+                    android:id="@+id/account_pwd_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:contentDescription="@string/img_description"
+                    android:src="@drawable/safeguard_icon"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_account_pwd_text_block"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_toRightOf="@id/account_pwd_icon" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/account_pwd"
+                        android:textColor="@color/darkgray"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@+id/account_pwd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dip"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="17.0sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/personalinfo_list_divider_color" />
+            </RelativeLayout>
+            <!-- 手机安全防护  block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_phone_safe_block"
+                android:layout_width="match_parent"
+                android:layout_height="50dip" >
+
+                <ImageView
+                    android:id="@+id/phone_safe_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:contentDescription="@string/img_description"
+                    android:src="@drawable/safeguard_icon"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_phone_safe_text_block"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_toRightOf="@id/phone_safe_icon" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/phone_safe"
+                        android:textColor="@color/darkgray"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@+id/phone_safe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dip"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="17.0sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/edit_dialog_layout" />
+</RelativeLayout>

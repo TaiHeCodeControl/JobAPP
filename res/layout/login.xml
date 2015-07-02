@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        layout="@layout/dlg_waiting_layout" />
+
+    <include
+        android:id="@+id/login_include"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        layout="@layout/login_title_regist" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/login_include" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/login_content"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="40dip"
+                android:layout_weight="500" >
+
+                <RelativeLayout
+                    android:id="@+id/account_login"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="20dip"
+                    android:layout_marginRight="20dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/register_bg" >
+
+                    <ImageView
+                        android:id="@+id/account"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/login_ico_username"
+                        android:textSize="20sp" />
+
+                    <com.parttime.view.ClearEditText
+                        android:id="@+id/account_edit"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="40dip"
+                        android:layout_toRightOf="@id/account"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:hint="@string/login_account_tip"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_pressed"
+                        android:textColorHint="@color/lightgray"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/account_register"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:layout_below="@id/account_login"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/register_bg" >
+
+                    <ImageView
+                        android:id="@+id/pwd"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/login_ico_password" />
+
+                    <com.parttime.view.ClearEditText
+                        android:id="@+id/pwd_edit"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="40dip"
+                        android:layout_toRightOf="@+id/pwd"
+                        android:background="@null"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="@string/login_pwd_tip"
+                        android:inputType="textPassword"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_pressed"
+                        android:textColorHint="@color/lightgray"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/login_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/account_register"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dip"
+                    android:background="@drawable/login_btn_bg_selector"
+                    android:text="确定"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/login_forget_pwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/login_btn"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/login_forget_pwd"
+                    android:textColor="@color/darkgray"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_margin="10dp"
+                android:background="@color/gray_pressed"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="浏览模式" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <Button
+                    android:id="@+id/login_ger"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/login_in_btn_seletor"
+                    android:text="我要工作"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/login_qiy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/login_in_btn_seletor"
+                    android:text="我要招人"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

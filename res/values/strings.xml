@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">蛋壳儿</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="img_description">兼职软件，由游美情景教育开发</string>
+    <string name="set_head_image">设置头像</string>
+    <string name="text_get_checknum_time">还有%1$d秒</string>
+    <string name="user_profile_warming">警告</string>
+    <string name="user_profile_warming_content">修改的内容还没保存，放弃保存吗？</string>
+    <string name="text_365_intro">&#160;&#160;&#160;&#160;  “蛋壳儿”是一个具有社交功能的就业孵化平台。为中国大学在校生级毕业生的社会实践、就业、创业、职前培训、管理培训和职业能力养成，提供线上企业职位推荐、社交互动、线下只能培训、校园实践项目、助学基金、创业辅导、创业基金扶持等一站式O2O全产业链服务。
+        \n&#160;&#160;&#160;&#160;    现在，“蛋壳儿”携手聚智堂名师教育及太和天下投资控股有限公司共筑“安心无忧”公益助学平台，斥资1.2亿培养潜力靴子，为其提供高额公益助学基金。
+        \n联系我们：\n&#160;&#160;电话：400-008-4111\n&#160;&#160;邮箱：tiahe1@tihe1.com</string>
+    <string name="text_show_version_name">%1$s&#160;&#040;Android&#041;</string>
+    <string name="register_name_digits">._0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ</string>
+
+    <!-- 登录页的字段 -->
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="login_account">账号</string>
+    <string name="login_pwd">密码</string>
+    <string name="login_account_tip">手机号</string>
+    <string name="login_pwd_tip">密码</string>
+    <string name="login_remember_pwd">记住密码</string>
+    <string name="login_forget_pwd">忘记密码</string>
+    <string name="login_third_tip">第三方登录仅支持个人用户</string>
+    <string name="apk_tips_ok">确定</string>
+    <string name="apk_tips_cancel">取消</string>
+
+    <!-- 修改密码的字段 -->
+    <string name="modify_pwd">修改密码</string>
+    <string name="retrieve_pwd">找回密码</string>
+    <string name="input_verify_tip">请输入验证码</string>
+    <string name="new_pwd">请输入新密码</string>
+    <string name="new_pwd_again">请再次输入新密码</string>
+
+    <!-- 注册的字段 -->
+    <string name="email_address">邮箱地址</string>
+    <string name="username_tip">请输入用户名</string>
+    <string name="email_address_tip">请输入手机号</string>
+    <string name="verify_code">验证码</string>
+    <string name="verfiy_code_tip">请输入验证码</string>
+    <string name="register_account">名称</string>
+    <string name="register_account_tip">请输入账户名称</string>
+    <string name="register_pwd_tip">6-18位数字或字母</string>
+    <string name="personal_user">个人用户</string>
+    <string name="company_user">企业用户</string>
+    <string name="want_ask_job">我要工作</string>
+    <string name="want_ask_worker">我要找人</string>
+    <string name="clause">我已阅读并同意</string>
+    <string name="clause1">蛋壳儿用户协议</string>
+    <string name="recommended_code">推荐码</string>
+    <string name="obtain_verfiy">获取验证码</string>
+    <string name="obtain_verfiy1">重获验证码</string>
+
+    <!-- mianfragment 中的字段 -->
+    <string name="home_pager">推荐</string>
+    <string name="home_job">附近</string>
+    <string name="home_apply_job">附近</string>
+    <string name="home_job_release">求职发布</string>
+    <string name="home_job_issue">招聘发布</string>
+    <string name="home_volunteer">管理</string>
+    <string name="home_communication">通讯</string>
+    <string name="home_personal">个人</string>
+    <string name="home_company">企业</string>
+
+    <!-- 首页中的字段 -->
+    <string name="home_hotwork">工作推荐</string>
+    <string name="home_jobseeker">求职者推荐</string>
+    <string name="home_job_detail">职位详情</string>
+    <string name="home_job_apply">职位申请</string>
+    <!-- apk download -->
+    <string name="apk_tips_content">dsfsdfsdfsdfsdfsdf</string>
+    <string name="del_tips_content">	是否删除您所选择的图片？\n</string>
+    <string name="del_tips_checkbox_content">删除本地文件</string>
+    <!-- 职位申请中的字段 -->
+    <string name="home_job_biref">一句话求职：</string>
+    <string name="home_job_biref_tip">请填写擅长方面</string>
+    <string name="home_name">姓名：</string>
+    <string name="home_name_tip">请填写真实姓名</string>
+    <string name="home_sex">性别：</string>
+    <string name="home_qq">QQ：</string>
+    <string name="home_qq_tip">请填写联系QQ</string>
+    <string name="home_phone">手机：</string>
+    <string name="home_phone_tip">请填写手机号</string>
+    <string name="home_mail">邮箱：</string>
+    <string name="home_mail_tip">请填写联系邮箱</string>
+    <string name="home_city">所在城市：</string>
+    <string name="home_job_intension">求职意向：</string>
+    <string name="home_job_intension_tip">请选择求职意向</string>
+    <string name="home_parttime">兼职时间：</string>
+    <string name="home_parttime_tip">请选择兼职时间</string>
+    <string name="home_height">身高：</string>
+    <string name="home_birth">出生年月：</string>
+    <string name="home_student">是否学生：</string>
+    <string name="home_education">学历：</string>
+    <string name="home_self_introduction">自我介绍：</string>
+    <string name="confirm">确定</string>
+    <string name="male">男</string>
+    <string name="female">女</string>
+    <string name="is">是</string>
+    <string name="not">否</string>
+    <string name="hour">时</string>
+    <string name="day">天</string>
+    <string name="week">周</string>
+
+    <!-- 工作页的字段 -->
+    <string name="job_title">职位</string>
+    <string name="job_commission">佣金</string>
+    <string name="job_location">位置</string>
+    <string name="job_all_resume">我的所有求职</string>
+    <string name="new_create_resume">新建求职</string>
+    <string name="comment">评论</string>
+    <string name="publish_comment">发表评论</string>
+    <string name="input_comment">请输入评论...</string>
+
+    <!-- 求职页的字段 -->
+    <string name="job_seeker">求职者</string>
+    <string name="resume_apply_time">发布时间</string>
+
+    <!-- 简历详情中的字段 -->
+
+    <string name="desired_position">期望职位：</string>
+    <string name="desired_job_location">期望地点：</string>
+    <string name="part_time">兼职时间：</string>
+    <string name="sex">  性&#160;&#160;&#160;&#160;别：</string>
+    <string name="type">  类&#160;&#160;&#160;&#160;别：</string>
+    <string name="job_resume_name">  姓&#160;&#160;&#160;&#160;名：</string>
+    <string name="job_resume_height">  身&#160;&#160;&#160;&#160;高：</string>
+    <string name="job_resume_phone">  手机号：</string>
+    <string name="parttime_job_experience">  兼职经历：</string>
+    <string name="resume_detatils">求职详情</string>
+    <string name="new_resume">新建求职</string>
+    <string name="release_time">发布时间：%1$s</string>
+    <string name="start_time12">开始时间：%1$s</string>
+    <string name="end_time12">结束时间：%1$s</string>
+    <string name="charge">雇佣金额：%1$s￥/天</string>
+    <string name="hiring">招聘人数：%1$s人</string>
+    <!-- 简历列表中的字段 -->
+    <string name="resume_desired_position">期望职位：%1$s</string>
+    <string name="resume_part_time">兼职时间：%1$s</string>
+
+    <!-- 职位发布的字段 -->
+    <string name="job_title1">职位名称：</string>
+    <string name="job_pay">职位薪资：</string>
+    <string name="job_num">招聘人数：</string>
+    <string name="job_type1">职位类别：</string>
+    <string name="start_time">开始时间：</string>
+    <string name="part_time1">兼职时间：</string>
+    <string name="end_time">结束时间：</string>
+    <string name="start_time1">开始时间</string>
+    <string name="end_time1">结束时间</string>
+    <string name="select_pic">选择图片</string>
+    <string name="job_address">工作地址：</string>
+    <string name="job_required">兼职需求：</string>
+    <string name="apply_condition">申请条件：</string>
+    <string name="company_pic">公司图片：</string>
+    <string name="apply_confirm">确认发布</string>
+    <string name="job_post">职位发布</string>
+    <string name="change_pic">更换图片</string>
+
+    <!-- 个人中心中的钱包部分 -->
+    <string name="wallet_account_remaind">账户余额</string>
+    <string name="wallet_my_bankcard">我的银行卡</string>
+    <string name="wallet_my_bankcard_text">%1$s张</string>
+    <string name="wallet_my_alipay">我的支付宝</string>
+    <string name="user_profile_gender_man">男</string>
+    <string name="user_profile_gender_woman">女</string>
+
+    <!-- 个人中心中的设置部分 -->
+    <string name="account_safe">账号与安全</string>
+    <string name="update">版本更新</string>
+    <string name="about_365">关于蛋壳儿</string>
+    <string name="feadback">意见反馈</string>
+
+    <!-- 设置当中的账号安全部分 -->
+    <string name="account">账户</string>
+    <string name="wechat">微信号</string>
+    <string name="qq">QQ号</string>
+    <string name="tell">手机号</string>
+    <string name="email">邮箱地址</string>
+    <string name="safe">安全</string>
+    <string name="account_pwd">账号密码</string>
+    <string name="phone_safe">手机安全防护</string>
+
+    <!-- 公益资源 -->
+    <string name="volunteer_publish_time">发布时间&#058;%1$s</string>
+    <string name="volunteer_signer_numer">报名人数%1$d&#047;%2$d</string>
+
+    <!-- 企业详情部分 -->
+    <string name="company_name"><u>企业名称&#032;&#058;&#032;&#032;%1$s</u></string>
+    <string name="company_position"><u>企业地区&#032;&#058;&#032;&#032;%1$s</u></string>
+    <string name="job_type"><u>工作职位&#032;&#058;&#032;&#032;%1$s</u></string>
+    <string name="position_details"><u>详细地址&#032;&#058;&#032;&#032;%1$s</u></string>
+    <string name="company_confirm"><u>企业认证&#032;&#058;&#032;&#032;%1$s</u></string>
+
+    <!-- pull down refresh -->
+    <string name="pull_to_refresh">下拉可以刷新</string>
+    <string name="release_to_refresh">释放立即刷新</string>
+    <string name="refreshing">正在刷新…</string>
+    <string name="head">这里是HeadView</string>
+    <string name="refresh_succeed">刷新成功</string>
+    <string name="refresh_fail">刷新失败</string>
+    <string name="pullup_to_load">上拉加载更多</string>
+    <string name="release_to_load">释放立即加载</string>
+    <string name="loading">正在加载...</string>
+    <string name="load_succeed">加载成功</string>
+    <string name="load_fail">加载失败</string>
+    <string name="not_updated_yet">暂未更新过</string>
+    <string name="updated_at">上次更新于%1$s前</string>
+    <string name="updated_just_now">刚刚更新</string>
+    <string name="time_error">时间有问题</string>
+
+    <!-- MediaProcess -->
+    <string name="no_corresponding_intent">抱歉，本机上没有相应的处理程序！</string>
+    <string name="External_storage_unmounted">外部存储器没有插入！！</string>
+    <string name="chose">请选择</string>
+    <string name="photo_save_image_err">处理图片出错，晴重试！</string>
+
+    <!-- 通讯中的字段 -->
+    <string name="search">搜索</string>
+    <string name="text_ack_msg">已读</string>
+    <string name="text_delivered_msg">送达</string>
+    <string name="back">返回</string>
+    <string name="save">保存</string>
+    <string name="button_pushtotalk">按住说话</string>
+    <string name="button_send">发送</string>
+    <string name="attach_smile">表情</string>
+    <string name="attach_picture">图片</string>
+    <string name="attach_take_pic">拍照</string>
+    <string name="attach_location">位置</string>
+    <string name="attach_file">文件</string>
+    <string name="attach_voice_call">语音电话</string>
+    <string name="user_card">名片</string>
+    <string name="move_up_to_cancel">手指上滑，取消发送</string>
+    <string name="release_to_cancel">松开手指，取消发送</string>
+    <string name="send_fail">发送消息失败,</string>
+    <string name="delete_message">删除消息</string>
+    <string name="copy_message">复制消息</string>
+    <string name="delete_voice">删除语音</string>
+    <string name="delete_video">删除视频</string>
+    <string name="delete">删除</string>
+    <string name="resend">重发</string>
+    <string name="confirm_resend">确认重发该信息？</string>
+    <string name="connect_failuer_toast">请检查网络或稍候重试</string>
+    <string name="network_unavailable">网络连接不可用，请检查网络</string>
+    <string name="copy">复制</string>
+    <string name="forward">转发</string>
+    <string name="button_logout">退出登录</string>
+    <string name="button_uploadlog">上传运行日志</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="prompt">提示</string>
+    <string name="clear_records">清空记录</string>
+    <string name="clear_all_records">是否清空所有聊天记录？</string>
+    <string name="location_recv">[%1$s的位置]</string>
+    <string name="location_message">位置信息</string>
+    <string name="recording_video">录制视频</string>
+    <string name="location_prefix">[我的位置]</string>
+    <string name="voice">[语音]</string>
+    <string name="picture">[图片]</string>
+    <string name="video">[视频]</string>
+    <string name="file">[文件]</string>
+    <string name="voice_call">[语音通话]</string>
+    <string name="button_cancel">取消</string>
+    <string name="button_save">保存</string>
+    <string name="button_search">查找</string>
+    <string name="button_add">添加</string>
+    <string name="search_header">搜</string>
+    <string name="network_isnot_available">网络不可用</string>
+    <string name="recoding_fail">录音失败，请重试！</string>
+    <string name="select_contacts">选择联系人</string>
+    <string name="confirm_forward_to">确定转发到：%1$s ?</string>
+    <string name="logout">退出登录</string>
+    <string name="logout_hint">退出后不会删除任何历史数据，下次登录依然可以使用本账号</string>
+    <string name="exit_group_hint">退出后，将不再接收此群聊信息</string>
+    <string name="dissolution_group_hint">退出后，此群将被解散</string>
+    <string name="exit_group">退出</string>
+    <string name="connect_conflict">同一帐号已在其他设备登录</string>
+    <string name="em_user_remove">此用户已被移除</string>
+    <string name="session">会话</string>
+    <string name="Cant_chat_with_yourself">不能和自己聊天</string>
+    <string name="Login_failed">登录失败:</string>
+    <string name="Is_the_registered">正在注册...</string>
+
+    <!-- 服务器返回的错误码信息，请保持在本文本中的最底下，容易找 -->
+    <string name="unknownerror">网速不给力，请重试 </string>
+    <string name="network_err">网络异常！</string>
+    <string name="SVR_REGISTER_USER_EXIST">用户名已被注册</string>
+    <string name="SVR_REGISTER_AVATAR_FAILED">图片存储失败</string>
+    <string name="SVR_REGISTER_DATA_FAILED">数据存储失败</string>
+    <string name="SVR_LOGIN_FAILED">用户名或密码不正确</string>
+    <string name="SVR_EMAIL_FORMAT_IS_NOT_CORRECT">邮箱不正确</string>
+    <string name="SVR_DATA_LOOK_FAILED">数据查询失败</string>
+    <string name="SVR_OLDPWD_ERROR">原密码不正确</string>
+    <string name="SVR_OLDPWD_NEWPWD_SAME">新密码与原密码一致</string>
+    <string name="SVR_MSG_ACCOUNT_PWD_IN_NULL">帐号或密码为空</string>
+    <string name="SVR_MSG_PHONE_NULL">发送的号码为空</string>
+    <string name="SVR_MSG_CONTENT_IN_NULL">下发内容为空</string>
+    <string name="SVR_MSG_CONTENT_IS_LONG">内容超长</string>
+    <string name="SVR_MSG_PHONE_IS_LONG">下发号码超长</string>
+    <string name="SVR_MSG_SYSTEM_ERROR">系统异常</string>
+    <string name="no_content">没有您查到你要找的信息，请重新查找</string>
+
+</resources>

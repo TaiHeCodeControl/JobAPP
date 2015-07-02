@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    >
+
+    <include
+        android:id="@+id/feed_back_caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/home_title" />
+    
+    <ScrollView
+        android:id="@+id/my_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/feed_back_caption"
+        android:background="@null" >
+
+        <RelativeLayout style="@style/system_2macth" >
+
+            <EditText
+                android:id="@+id/feadback_content"
+                android:layout_width="match_parent"
+                android:layout_height="230dip"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="48dip"
+                android:background="@drawable/feadback_back"
+                android:drawablePadding="6dp"
+                android:gravity="top"
+                android:ellipsize="end"
+                android:hint="请输入信息……"
+                android:padding="6dip"
+                android:textColor="@color/black"
+                android:textColorHint="@color/lightgray"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/feadback_content_submit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:layout_below="@id/feadback_content"
+                android:layout_margin="20dip"
+                android:background="@drawable/login_btn_bg_selector"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:text="提交信息"
+                android:textStyle="normal" />
+            
+            
+        </RelativeLayout>
+    </ScrollView>
+    
+     <include
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        layout="@layout/dlg_waiting_layout" />
+</RelativeLayout>

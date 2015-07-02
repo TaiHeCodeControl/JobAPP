@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/company_job_managed_caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/home_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/company_job_managed_caption"
+        android:background="@color/background_gray" >
+
+        <ListView
+            android:id="@+id/job_managed_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="5dip"
+            android:divider="@color/background_gray"
+            android:dividerHeight="5dip"
+            android:listSelector="@color/listview_item_selector_color"
+            android:scrollbars="none" >
+        </ListView>
+    </RelativeLayout>
+
+   <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/background_gray" 
+        android:paddingBottom="20dip">
+
+        <TextView
+            android:id="@+id/employment_btn"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_margin="20dip"
+            android:background="@color/darkgray"
+            android:gravity="center"
+            android:text="雇佣"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+    </RelativeLayout>
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/company_job_managed_caption"
+        layout="@layout/dlg_waiting_layout" />
+</RelativeLayout>

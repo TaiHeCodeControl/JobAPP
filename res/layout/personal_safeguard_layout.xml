@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/personal_safeguard_caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/home_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/personal_safeguard_caption"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none"
+        android:requiresFadingEdge="none"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_gray"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dip"
+                android:layout_weight="1.0"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/safeguard_image" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_marginTop="10dip"
+                android:layout_weight="3.0"
+                android:background="@color/background_gray"
+                android:orientation="vertical" >
+
+                <!-- 个人申诉  block -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_personal_appeal_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dip"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dip"
+                        android:text="个人申诉"
+                        android:textColor="@color/darkgray"
+                        android:textSize="17.0sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:background="@color/personalinfo_list_divider_color" />
+                </RelativeLayout>
+                <!-- 申请先行赔付  block -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_first_payed_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dip"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dip"
+                        android:text="申请先行赔付"
+                        android:textColor="@color/darkgray"
+                        android:textSize="17.0sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:background="@color/personalinfo_list_divider_color" />
+                </RelativeLayout>
+                <!-- 购买保障  block -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_buyed_safeguard_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dip"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dip"
+                        android:text="购买保障"
+                        android:textColor="@color/darkgray"
+                        android:textSize="17.0sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:background="@color/personalinfo_list_divider_color" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

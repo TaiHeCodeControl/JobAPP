@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#aabbcc"
+    android:paddingBottom="5dip"
+    android:paddingRight="5dip" >
+
+    <com.parttime.view.ClearEditText
+        android:id="@+id/search_edit"
+        android:layout_width="150dip"
+        android:layout_height="35dip"
+        android:layout_margin="5dp"
+        android:background="@drawable/search_bg"
+        android:ellipsize="end"
+        android:hint="@string/search"
+        android:singleLine="true"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/search_btn"
+        android:layout_width="50dp"
+        android:layout_height="35dip"
+        android:layout_margin="5dp"
+        android:layout_toRightOf="@+id/search_edit"
+        android:background="@color/main_btn_press"
+        android:text="搜索"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/issue_time_text"
+        android:layout_width="wrap_content"
+        android:paddingLeft="5dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_btn"
+        android:layout_marginTop="5dp"
+        android:text="发布时间"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/issue_time_text"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip" >
+
+        <RadioButton
+            android:id="@+id/radiobutton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:checked="true"
+            android:drawableLeft="@drawable/pop_state_radio"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="1天"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radiobutton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableLeft="@drawable/pop_state_radio"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="3天"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radiobutton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableLeft="@drawable/pop_state_radio"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="1周内"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/confirm_btn"
+        android:layout_width="50dp"
+        android:layout_height="35dip"
+        android:layout_below="@id/issue_time_text"
+        android:layout_margin="5dp"
+        android:layout_toRightOf="@+id/radiogroup_time"
+        android:background="@color/main_btn_press"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+</RelativeLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/seeker_linear"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@android:color/transparent"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/job_seeker_relative"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:padding="2dp"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/job_sign_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/job_item_time_bg"
+            android:padding="2dp"
+            android:text="时"
+            android:textColor="@color/job_red"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/job_sign_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/job_item_time_green"
+            android:padding="2dp"
+            android:text="天"
+            android:textColor="@color/green"
+            android:textSize="12sp"
+            android:visibility="invisible" />
+
+        <ProgressBar
+            android:id="@+id/home_ratingBar"
+            android:layout_width="75dp"
+            android:layout_height="12dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/job_sign_time"
+            android:indeterminateOnly="false"
+            android:max="5"
+            android:progressDrawable="@drawable/credit_progress"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/job_seeker_name"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@+id/job_sign_time"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/job_time"
+            android:layout_toRightOf="@+id/job_sign_time"
+            android:text="小李"
+            android:textColor="@color/darkgray"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/job_sign_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/job_time"
+            android:layout_alignTop="@+id/job_seeker_name"
+            android:background="@drawable/job_item_time_blue"
+            android:padding="2dp"
+            android:text="周"
+            android:textColor="@color/light_blue"
+            android:textSize="12sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/job_time"
+            style="@style/system_2wrap"
+            android:layout_alignLeft="@+id/job_sign_time"
+            android:layout_below="@+id/job_sign_time"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/alert_icon"
+            android:gravity="center_vertical"
+            android:text="2015-01-15"
+            android:textColor="@color/darkgray"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/desired_relative"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/position"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="寿司店小时工"
+            android:textColor="@color/darkgray"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/release_time_relative"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/distance_icon"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bitmap_sign" />
+
+        <TextView
+            android:id="@+id/job_location"
+            style="@style/system_2wrap"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/distance_icon"
+            android:text="300m"
+            android:textColor="@color/darkgray" />
+    </RelativeLayout>
+
+</LinearLayout>

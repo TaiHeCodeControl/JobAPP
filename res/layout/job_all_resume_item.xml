@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#bdbdbd" />
+
+    <RelativeLayout
+        android:id="@+id/detail_relative"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/desired_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/resume_desired_position" />
+
+        <TextView
+            android:id="@+id/job_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/desired_position"
+            android:layout_marginTop="5dp"
+            android:text="@string/resume_part_time" />
+
+        <CheckBox
+            android:id="@+id/select_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/desired_position"
+            android:layout_marginRight="5dp"
+            android:button="@drawable/login_checkbox_selector" />
+
+        <TextView
+            android:id="@+id/view_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/job_time"
+            android:layout_centerHorizontal="true"
+            android:text="查看详情" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/detail_relative"
+        android:layout_marginTop="5dp"
+        android:background="#bdbdbd" />
+
+</RelativeLayout>

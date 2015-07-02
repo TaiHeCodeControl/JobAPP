@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- spalsh -->
+    <color name="ad_flipper_bg_color">#2d3142</color>
+    <color name="ad_flipper_text_color">#8492aa</color>
+    <color name="title_bg_color">#bf1a21</color>
+    <color name="main_btn_press">#fb7d87</color>
+
+    <!-- 基本颜色 -->
+    <color name="green">#00DD00</color>
+    <!-- 绿色 -->
+    <color name="black">#000000</color>
+    <!-- 黑色 -->
+    <color name="white">#FFFFFF</color>
+    <!-- 白色 -->
+    <color name="black_white">#F3F3F3</color>
+    <!-- 深白色 -->
+    <color name="red">#ff0000</color>
+    <!-- 红色 -->
+    <color name="darkgray">#A9A9A9</color>
+    <!-- 暗灰色 -->
+    <color name="titlegray">#666</color>
+    <!-- 标题灰色 -->
+    <color name="lightgray">#CCD4D6</color>
+    <!-- 浅灰色 -->
+    <color name="caption_blue1">#348DF1</color>
+    <!-- 标题蓝色 -->
+    <color name="caption_blue">#00B4FF</color>
+    <!-- 标题蓝色 -->
+    <color name="dark_blue">#007AC1</color>
+    <!-- 深蓝色 -->
+    <color name="light_blue">#57C4E1</color>
+    <!-- 浅蓝色 -->
+    <color name="light_yellow">#F7E07A</color>
+    <!-- 浅黄色 -->
+    <color name="login_green">#3eb65d</color>
+    <color name="administration_green">#8CDF9B</color>
+    <!-- 管理绿色 -->
+
+    <color name="btn_green">#27bd24</color>
+    <!-- 按钮绿 -->
+    <color name="title_red">#385798</color>
+    <!-- 标题深蓝 -->
+    <color name="background_gray">#f0f0f0</color>
+    <!-- 背景灰色 -->
+    <color name="listview_item_selector_color">@android:color/transparent</color>
+    <!-- 列表每一条选中的颜色 -->
+
+
+    <!-- waiting dialog -->
+    <color name="waiting_dlg_bg_color">#348DF1</color>
+    <color name="waiting_dlg_text_color">#ffffff</color>
+    <color name="waiting_dlg_bg_bg_color">#66000000</color>
+    <color name="user_setting_warn_messenge_bg_color">#ffefd1</color>
+    <color name="tab_widget_bg">#B8CDE0</color>
+    <color name="general_personal_data_activity_bg_color">#ffffff</color>
+    <color name="general_activity_caption_bg_color">#3db357</color>
+    <color name="job_title_red">#27bd24</color>
+    <color name="job_title_gray">#a8a8a8</color>
+    <color name="job_title_line_gray">#b7b7b7</color>
+
+    <!-- 环信中用到的颜色 -->
+    <color name="common_top_bar_blue">#4ebcd3</color>
+    <color name="btn_login_normal">#007086</color>
+    <color name="btn_login_pressed">#303744</color>
+    <color name="btn_logout_normal">#d33f3f</color>
+    <color name="btn_logout_pressed">#DA5A4D</color>
+    <color name="btn_register_normal">#2dafa3</color>
+    <color name="btn_register_pressed">#4ebcd3</color>
+    <color name="common_bottom_bar_normal_bg">#2d2f31</color>
+    <color name="common_bottom_bar_selected_bg">#161718</color>
+    <color name="common_botton_bar_blue">#2ea7e0</color>
+    <color name="common_bg">#fcfcfc</color>
+    <color name="btn_pressed_green_solid">#B6DA53</color>
+    <color name="divider_list">#cccccc</color>
+    <color name="top_bar_normal_bg">#4ebcd3</color>
+    <color name="error_item_color">#F6EBE6</color>
+    <color name="bottom_bar_normal_bg">#2D2F31</color>
+    <color name="bottom_text_color_normal">#ffffff</color>
+    <color name="btn_white_normal">#f7f8f8</color>
+    <color name="btn_white_pressed">#b5b5b6</color>
+    <color name="btn_green_noraml">#68C270</color>
+    <color name="btn_green_pressed">#6FCD78</color>
+    <color name="btn_gray_normal">#c0c0c0</color>
+    <color name="btn_gray_pressed_status">#b5b5b6</color>
+    <color name="btn_gray_pressed">#666667</color>
+    <color name="btn_blue_normal">#1e90ff</color>
+    <color name="btn_blue_pressed">#0066FF</color>
+    <color name="orange">#FFA500</color>
+    <color name="gray_pressed">#b5b5b6</color>
+    <color name="gray_normal">#666667</color>
+    <color name="grid_state_pressed">#1Affffff</color>
+    <color name="grid_state_focused">#80000000</color>
+    <color name="voip_interface_text_color">#bababa</color>
+    <color name="black_deep">#FF000000</color>
+
+    <!-- personal  center's color -->
+    <color name="personal_content_back">#EDE9E8</color>
+
+    <!-- personal info color -->
+    <color name="personalinfo_list_divider_color">#cfcfcf</color>
+
+    <!-- volunteer color -->
+    <color name="publish_back_color">#55AA28</color>
+
+    <!-- job  color -->
+    <color name="job_gray">#8f8f8f</color>
+    <color name="job_red">#f63128</color>
+
+    <!-- 签到部分 -->
+    <color name="signed_color">#1BBCFF</color>
+    <color name="unsigned_color">#F06464</color>
+
+</resources>

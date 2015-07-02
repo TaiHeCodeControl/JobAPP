@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/white">
+    
+    <!-- 进行中的状态  -->
+    <RelativeLayout 
+        android:id="@+id/job_before_done_block"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <TextView 
+            android:id="@+id/job_before_done_title"
+            style="@style/text_sign_style"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dip"
+            android:layout_centerVertical="true"
+            android:textSize="17sp"
+            android:text=""/>
+        
+        <TextView 
+            android:id="@+id/job_before_done_time"
+            style="@style/text_sign_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dip"
+            android:textSize="12sp"
+            android:text=""/>
+        
+    </RelativeLayout>
+
+</LinearLayout>

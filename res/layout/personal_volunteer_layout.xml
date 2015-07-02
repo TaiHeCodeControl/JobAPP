@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/volunteer_title_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/home_title" />
+
+    <LinearLayout
+        android:id="@+id/ask_help_content_card"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_below="@id/volunteer_title_block"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="5dip"
+        android:orientation="horizontal"
+         >
+
+        <TextView
+            android:id="@+id/left_card_ask_help"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+           android:background="@drawable/ask_vol_btn_block_back_pressed1"
+            android:gravity="center"
+            android:text="求助"
+            android:textColor="@color/title_red"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/right_card_volunteer"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/ask_vol_btn_block_back_normal1"
+            android:gravity="center"
+            android:text="志愿者"
+            android:textColor="@color/btn_green"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_alignBottom="@id/ask_help_content_card"
+        android:background="@color/background_gray" />
+
+    <RelativeLayout
+        android:id="@+id/publish_card_block"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:gravity="center" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_alignParentTop="true"
+            android:background="@color/background_gray" />
+
+        <TextView
+            android:id="@+id/volunteer_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_centerInParent="true"
+            android:background="@drawable/login_btn_bg_selector"
+            android:gravity="center"
+            android:paddingBottom="5dip"
+            android:paddingLeft="50dip"
+            android:paddingRight="50dip"
+            android:paddingTop="5dip"
+            android:text="发布求助"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <com.parttime.pullrefresh.PullToRefreshLayout
+        android:id="@+id/volunteer_refreshable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/publish_card_block"
+        android:layout_below="@id/ask_help_content_card"
+        android:background="@color/background_gray" >
+
+        <include layout="@layout/refresh_head" />
+        <!-- 支持所有实现Pullable接口的View -->
+
+        <com.parttime.pullrefresh.PullableListView
+            android:id="@+id/volunteer_content_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:divider="@null"
+            android:dividerHeight="10dp" />
+
+        <include layout="@layout/load_more" />
+    </com.parttime.pullrefresh.PullToRefreshLayout>
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/publish_card_block"
+        android:layout_below="@id/ask_help_content_card"
+        layout="@layout/dlg_waiting_layout" />
+
+</RelativeLayout>

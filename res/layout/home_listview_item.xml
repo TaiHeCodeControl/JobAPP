@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent" >
+
+    <!--
+         <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" >
+    -->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/home_list_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/home_list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/home_list_image"
+            android:layout_marginLeft="5dp"
+            android:text="门店信息采集" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/home_relative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true" >
+
+        <TextView
+            android:id="@+id/home_list_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:text="2015-1-12" />
+
+        <ProgressBar
+            android:id="@+id/home_ratingBar"
+            android:layout_width="75dp"
+            android:layout_height="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/home_list_time"
+            android:indeterminateOnly="false"
+            android:max="100"
+            android:progress="80"
+            android:progressDrawable="@drawable/credit_progress" />
+
+        <TextView
+            android:id="@+id/invite_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/home_ratingBar"
+            android:text="招25人|120元/人" />
+    </RelativeLayout>
+
+</RelativeLayout>

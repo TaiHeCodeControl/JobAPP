@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray" >
+
+    <include
+        android:id="@+id/changepwd_caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/home_title" />
+
+    <ScrollView
+        android:id="@+id/my_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/changepwd_caption"
+        android:background="@null" >
+
+        <RelativeLayout style="@style/system_macth_wrap" >
+
+            <RelativeLayout
+                android:id="@+id/changepwd_modify_pwd_relative"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/forget_bg_shape" >
+
+                <EditText
+                    android:id="@+id/changepwd_new_pwd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/register_bg"
+                    android:hint="请输入旧密码"
+                    android:inputType="textPassword"
+                    android:padding="10dp"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/changepwd_new_pwd_again"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/changepwd_new_pwd"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/register_bg"
+                    android:hint="@string/new_pwd"
+                    android:inputType="textPassword"
+                    android:padding="10dp"
+                    android:singleLine="true" />
+
+                <Button
+                    android:id="@+id/changepwd_confirm_pwd_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/changepwd_new_pwd_again"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/register_btn_bg_selecotr"
+                    android:text="修改"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/changepwd_confirm_pwd_btn" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        layout="@layout/dlg_waiting_layout" />
+
+</RelativeLayout>

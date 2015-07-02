@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/resume_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/home_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/resume_title" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" >
+
+            <TextView
+                android:id="@+id/desired_position"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/desired_position"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/desired_text"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:layout_toRightOf="@+id/desired_position"
+                android:ems="8"
+                android:gravity="center_vertical"
+                android:textColor="@color/darkgray" />
+
+            <View
+                android:id="@+id/desired_position_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@id/desired_position"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:id="@+id/desired_job_location"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@id/desired_position_line"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/desired_job_location"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/desired_job_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/desired_position_line"
+                android:layout_margin="10dp"
+                android:layout_toRightOf="@+id/desired_position"
+                android:gravity="center_vertical"
+                android:textColor="@color/darkgray" />
+
+            <View
+                android:id="@+id/desired_job_location_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@id/desired_job_text"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:id="@+id/parttime_text"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@id/desired_job_location_line"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/part_time"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignTop="@id/parttime_text"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/parttime_text"
+                android:gravity="center_vertical"
+                android:textColor="@color/darkgray" />
+
+            <View
+                android:id="@+id/parttime_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@id/time_text"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:id="@+id/type_text"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignRight="@id/parttime_text"
+                android:layout_below="@id/parttime_line"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/type"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/type_radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignTop="@id/type_text"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/type_text"
+                android:gravity="center_vertical"
+                android:textColor="@color/darkgray" >
+            </TextView>
+
+            <View
+                android:id="@+id/type_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@id/type_text"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:id="@+id/name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignRight="@id/parttime_text"
+                android:layout_below="@id/type_line"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/job_resume_name"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/name_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignTop="@id/name_text"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/name_text"
+                android:ems="8"
+                android:gravity="center_vertical"
+                android:textColor="@color/darkgray" />
+
+            <View
+                android:id="@+id/name_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@id/name_text"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:id="@+id/sex_text"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignRight="@id/parttime_text"
+                android:layout_below="@id/name_line"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/sex"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/sex_select"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignTop="@id/sex_text"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/sex_text"
+                android:gravity="center_vertical"
+                android:textColor="@color/darkgray" />
+
+            <View
+                android:id="@+id/sex_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@id/sex_text"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:id="@+id/height_text"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignRight="@id/parttime_text"
+                android:layout_below="@id/sex_line"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/job_resume_height"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/height_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignTop="@id/height_text"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/height_text"
+                android:gravity="center_vertical"
+                android:textColor="@color/darkgray" />
+
+            <View
+                android:id="@+id/height_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@id/height_text"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:id="@+id/phone_text"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignRight="@id/parttime_text"
+                android:layout_below="@id/height_line"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/job_resume_phone"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/phone_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignTop="@id/phone_text"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/phone_text"
+                android:gravity="center_vertical"
+                android:textColor="@color/darkgray" />
+
+            <View
+                android:id="@+id/phone_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@id/phone_text"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:id="@+id/parttime_job_experience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phone_line"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/parttime_job_experience"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/editSms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/parttime_job_experience"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/parttime_job_experience"
+                android:gravity="center_vertical"
+                android:textColor="@color/darkgray" />
+
+            <View
+                android:id="@+id/editSms_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@id/editSms"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:background="@color/lightgray" />
+
+            <LinearLayout
+                android:id="@+id/btn_linear"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editSms_line"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/content_link_session"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/home_job_detail_link_bg"
+                    android:text="会话"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/content_job_commit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/home_job_detail_comment_bg"
+                    android:text="评论"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_linear"
+                android:layout_marginTop="15dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

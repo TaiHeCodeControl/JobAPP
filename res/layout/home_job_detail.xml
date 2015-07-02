@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray" >
+
+    <include
+        android:id="@+id/job_title_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/home_title" />
+
+    <ScrollView
+        android:id="@+id/content_condition"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/job_title_view"
+        android:background="@color/white"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:background="@color/white" >
+
+            <RelativeLayout
+                android:id="@+id/title_relative"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/detail_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/darkgray"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/detail_time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detail_title"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/darkgray"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/start_time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detail_time"
+                    android:layout_marginLeft="10dp"
+                    android:text="开始时间："
+                    android:textColor="@color/darkgray"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/end_time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/start_time"
+                    android:layout_marginLeft="10dp"
+                    android:text="结束时间"
+                    android:textColor="@color/darkgray"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/content_realtive"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_relative"
+                android:layout_marginTop="10dp"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/content_money"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="120￥/天"
+                    android:textColor="@color/darkgray" />
+
+                <TextView
+                    android:id="@+id/content_people_number"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/content_money"
+                    android:layout_marginLeft="10dp"
+                    android:text="/"
+                    android:textColor="@color/darkgray" />
+
+                <View
+                    android:id="@+id/content_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/content_people_number"
+                    android:layout_margin="10dp"
+                    android:background="@color/lightgray" />
+
+                <TextView
+                    android:id="@+id/content_parttime_job_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/content_line"
+                    android:layout_marginLeft="10dp"
+                    android:text="兼职介绍"
+                    android:textColor="@color/darkgray"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/content_parttime_job_detail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/content_parttime_job_title"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/lightgray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/content_condition_relative"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/content_realtive"
+                android:layout_marginTop="20dp" >
+
+                <TextView
+                    android:id="@+id/content_apply_condition"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="申请条件"
+                    android:textColor="@color/darkgray"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/content_apply_condition_detail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/content_apply_condition"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/darkgray" />
+
+                <View
+                    android:id="@+id/content_condition_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/content_apply_condition_detail"
+                    android:layout_margin="10dp"
+                    android:background="@color/lightgray" />
+
+                <TextView
+                    android:id="@+id/content_parttime_job_require"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/content_condition_line"
+                    android:layout_marginLeft="10dp"
+                    android:text="兼职要求"
+                    android:textColor="@color/darkgray"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/content_parttime_job_require_detail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/content_parttime_job_require"
+                    android:layout_marginLeft="10dp"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/darkgray" />
+
+                <TextView
+                    android:id="@+id/content_pic_example"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/content_parttime_job_require_detail"
+                    android:layout_marginLeft="10dp"
+                    android:text="图片示例"
+                    android:textColor="@color/darkgray"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/pic_image"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_below="@id/content_pic_example"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/photo_frame_bg"
+                    android:contentDescription="@string/img_description"
+                    android:padding="5dip"
+                    android:scaleType="fitXY" />
+
+                <View
+                    android:id="@+id/content_parttime_job_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_below="@id/pic_image"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/lightgray" />
+
+                <LinearLayout
+                    android:id="@+id/btn_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dip"
+                    android:layout_below="@id/content_parttime_job_line"
+                    android:layout_marginTop="5dip"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/content_link_session"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:drawableTop="@drawable/contact_job_icon"
+                        android:gravity="center"
+                        android:text="会话"
+                        android:textColor="@color/darkgray"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/content_job_apply"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:drawableTop="@drawable/apply_job_icon"
+                        android:gravity="center"
+                        android:text="申请"
+                        android:textColor="@color/darkgray"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/content_job_commit"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:drawableTop="@drawable/discuss_job_icon"
+                        android:gravity="center"
+                        android:text="评论"
+                        android:textColor="@color/darkgray"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btn_linear"
+                    android:layout_marginTop="10dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        layout="@layout/dlg_waiting_layout" />
+
+</RelativeLayout>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.parttime.parttimejob"
+    android:installLocation="preferExternal"
+    android:versionCode="2"
+    android:versionName="2.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="false"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- SDK1.5需要android.permission.GET_TASKS权限判断本程序是否为当前运行的应用? -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:name="com.parttime.application.PartTimeApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- key的申请 需要    数字签名【sha1 (window→preferences→Android→Build) ;  包名 】 -->
+        <!-- 生成apk -->
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="rMYbX1xLtCv5v49W5ldqehSu" />
+
+        <!--
+          <meta-data
+          android:name="com.baidu.lbsapi.API_KEY"
+            android:value="KPHgqqe73HcfI7lepG4aqexM" />
+        -->
+
+
+        <!--
+             <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="p19TNw4HAgklSH5seZSp05bn" />
+        -->
+
+        <activity
+            android:name="com.parttime.activity.StartActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 注册provider部分++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <provider
+            android:name="com.parttime.data.PartTimeProvider"
+            android:authorities="com.parttime.data.PartTimeProvider.job" />
+
+        <!-- 注册provider部分++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+        <!-- 注册服务部分++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <service
+            android:name="com.parttime.filedownload.DownloadService"
+            android:label="DownloadService" >
+        </service>
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+        <!-- 注册服务部分++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+        <activity android:name="com.parttime.activity.IntroActivity" />
+        <activity
+            android:name="com.parttime.activity.LoginActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.parttime.fragment.MainFragment"
+            android:launchMode="singleTask" />
+        <activity android:name="com.parttime.activity.Home_Job_Detail" />
+        <activity android:name="com.parttime.activity.Home_Job_Apply" />
+        <activity android:name="com.parttime.activity.Login_Forgetpwd" />
+        <activity android:name="com.parttime.activity.Register_User" />
+        <activity android:name="com.parttime.activity.Personal_Wallet_Activity" />
+        <activity android:name="com.parttime.activity.Personal_SafeGuard_Activity" />
+        <activity android:name="com.parttime.activity.Personal_Task_Activity" />
+        <activity android:name="com.parttime.activity.Personal_Task_Portrait_Activity" />
+        <activity android:name="com.parttime.activity.Personal_Details_Activity" />
+        <activity android:name="com.parttime.activity.Personal_Discuss_Activity" />
+        <activity android:name="com.parttime.activity.Personal_Collection_Activity" />
+        <activity android:name="com.parttime.activity.Personal_Setting_Activity" />
+        <activity android:name="com.parttime.activity.Personal_SpecialCustomer_Activity" />
+        <activity android:name="com.parttime.activity.Personal_FeadBack_Activity" />
+        <activity android:name="com.parttime.activity.Setting_AccountSafe_Activity" />
+        <activity android:name="com.parttime.activity.Setting_About365_Activity" />
+        <activity android:name="com.parttime.activity.Job_Relase_Resume" />
+        <activity android:name="com.parttime.activity.Job_Create_Resume" />
+        <activity android:name="com.parttime.activity.Company_Employment_Activity" />
+        <activity android:name="com.parttime.activity.Company_Job_Managed_Activity" />
+        <activity android:name="com.parttime.activity.Company_Details_Introduce_Activity" />
+        <activity android:name="com.parttime.activity.Job_Issue_Activity" />
+        <activity android:name="com.parttime.activity.Head_Image_Select" />
+        <activity android:name="com.parttime.activity.Show_Pic_Activity" />
+        <activity android:name="com.parttime.activity.Volunteer_Detials_Activity" />
+        <activity android:name="com.parttime.activity.AskDetails_Activity" />
+        <activity android:name="com.parttime.activity.BaseActivity" />
+        <activity android:name="com.parttime.activity.ChatActivity" />
+        <activity android:name="com.parttime.activity.ShowBigImage" />
+        <activity android:name="com.parttime.activity.ShowNormalFileActivity" />
+        <activity android:name="com.parttime.activity.VoiceCallActivity" />
+        <activity android:name="com.parttime.activity.Personal_Resume_Manage_Activity" />
+        <activity android:name="com.parttime.activity.Personal_Resume_Details_Acitivity" />
+        <activity android:name="com.parttime.activity.Comment_Activity" />
+        <activity android:name="com.parttime.activity.Comment_Activity_Company" />
+        <activity android:name="com.parttime.activity.Job_See_Resume" />
+        <activity android:name="com.parttime.activity.Company_JobList_Activty" />
+        <activity android:name="com.parttime.activity.Volunteer_PublishHelp_Activity" />
+        <activity android:name="com.parttime.activity.VolunteerSignUpActivity" />
+        <activity android:name="com.parttime.activity.Ask_Answer_Activity" />
+        <activity android:name="com.parttime.activity.Personal_ModifyPwd_Activity" />
+        <activity android:name="com.parttime.activity.VolunteerMainActivity" />
+        <activity android:name="com.parttime.activity.EULA_Activity" />
+
+        <!-- 地图显示activity -->
+        <activity
+            android:name="com.parttime.activity.BaiduMap_Activity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.parttime.activity.ContextMenu"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle" />
+        <activity
+            android:name="com.parttime.activity.AlertDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle" />
+
+        <!-- Required. AppKey copied from Portal -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="sunhua#parttimejob" />
+        <!-- Required SDK核心功能 -->
+        <service android:name="com.easemob.chat.EMChatService" />
+    </application>
+
+</manifest>

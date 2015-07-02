@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/volunteer_sign_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/home_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/volunteer_sign_title"
+        android:background="@color/background_gray"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none"
+        android:requiresFadingEdge="none"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_gray"
+            android:orientation="vertical" >
+
+            <!-- 报名头像部分block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_volunteer_signup_image_block"
+                android:layout_width="match_parent"
+                android:layout_height="220dip"
+                android:background="@color/background_gray" >
+
+                <TextView
+                    android:id="@+id/volunteer_signup_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="30dip"
+                    android:background="@drawable/volunteer_signup_back" />
+
+                <ImageView
+                    android:id="@+id/volunteer_signup_head_image"
+                    android:layout_width="80dip"
+                    android:layout_height="80dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/volunteer_signup_image"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="15dip"
+                    android:background="@drawable/photo_frame_bg"
+                    android:contentDescription="@string/img_description"
+                    android:padding="5dip"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/default_avatar_girl" />
+            </RelativeLayout>
+            <!-- 姓名部分block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_volunteer_signup_name_block"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="@color/white" >
+
+                <LinearLayout
+                    android:id="@+id/signup_name_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_signup_name_text_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="志愿者姓名 : "
+                            android:textColor="@color/darkgray"
+                            android:textSize="17.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_signup_name_content_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.5" >
+
+                        <EditText
+                            android:id="@+id/signup_name_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dip"
+                            android:layout_marginLeft="5dip"
+                            android:layout_marginRight="20dip"
+                            android:background="@drawable/feadback_back"
+                            android:drawablePadding="6dp"
+                            android:ellipsize="end"
+                           android:gravity="left|center_vertical"
+                            android:hint="请输入信息……"
+                            android:padding="6dip"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dip"
+                android:background="@color/background_gray" />
+            <!-- 电话部分block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_volunteer_tel_block"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="@color/white" >
+
+                <LinearLayout
+                    android:id="@+id/tel_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_tel_text_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="志愿者电话 : "
+                            android:textColor="@color/darkgray"
+                            android:textSize="17.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_tel_content_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.5" >
+
+                        <EditText
+                            android:id="@+id/tel_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dip"
+                            android:layout_marginLeft="5dip"
+                            android:layout_marginRight="20dip"
+                            android:background="@drawable/feadback_back"
+                            android:drawablePadding="6dp"
+                            android:ellipsize="end"
+                            android:gravity="left|center_vertical"
+                            android:hint="请输入信息……"
+                            android:padding="6dip"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dip"
+                android:background="@color/background_gray" />
+            <!-- 志愿者证件部分 -->
+
+            <RelativeLayout
+                android:id="@+id/rl_volunteer_IDcard_block"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="@color/white" >
+
+                <LinearLayout
+                    android:id="@+id/IDcard_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_IDcard_text_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="志愿者证件 : "
+                            android:textColor="@color/darkgray"
+                            android:textSize="17.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_IDcard_content_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.5" >
+
+                        <EditText
+                            android:id="@+id/IDcard_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dip"
+                            android:layout_marginLeft="5dip"
+                            android:layout_marginRight="20dip"
+                            android:background="@drawable/feadback_back"
+                            android:drawablePadding="6dp"
+                            android:ellipsize="end"
+                            android:inputType="number"
+                           android:gravity="left|center_vertical"
+                            android:hint="请输入信息……"
+                            android:padding="6dip"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dip"
+                android:background="@color/background_gray" />
+            <!-- 志愿者自我描述 -->
+
+            <RelativeLayout
+                android:id="@+id/rl_volunteer_disc_myself_block"
+                android:layout_width="match_parent"
+                android:layout_height="180dip"
+                android:background="@color/white" >
+
+                <LinearLayout
+                    android:id="@+id/disc_myself_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_disc_myself_text_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dip"
+                        android:layout_weight="2" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="志愿者自我描述: "
+                            android:textColor="@color/darkgray"
+                            android:textSize="17.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_disc_myself_content_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.5" >
+
+                        <EditText
+                            android:id="@+id/disc_myself_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dip"
+                            android:layout_marginLeft="5dip"
+                            android:layout_marginRight="20dip"
+                            android:layout_marginTop="15dip"
+                            android:background="@drawable/feadback_back"
+                            android:drawablePadding="6dp"
+                            android:ellipsize="end"
+                            android:gravity="top"
+                            android:hint="请输入信息……"
+                            android:padding="6dip"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/sign_up_ensure_tips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/disc_myself_block"
+                    android:gravity="center"
+                    android:textColor="@color/red"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/sign_up_ensure_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dip"
+                    android:layout_below="@id/sign_up_ensure_tips"
+                    android:layout_marginLeft="20dip"
+                    android:layout_marginRight="20dip"
+                    android:layout_marginTop="5dip"
+                    android:layout_marginBottom="20dip"
+                    android:background="@drawable/btn_selector"
+                    android:gravity="center"
+                    android:text="确认报名"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        layout="@layout/dlg_waiting_layout" />
+
+</RelativeLayout>

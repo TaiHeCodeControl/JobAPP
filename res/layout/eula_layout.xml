@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/eula_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/home_title" />
+
+    <ScrollView
+        android:id="@+id/my_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/eula_title"
+        android:background="@null" >
+
+        <RelativeLayout style="@style/system_2macth" >
+
+            <WebView
+                android:id="@+id/eula_web"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" 
+                />
+        </RelativeLayout>
+    </ScrollView>
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        layout="@layout/dlg_waiting_layout" />
+</RelativeLayout>

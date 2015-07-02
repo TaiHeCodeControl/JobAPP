@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray" >
+
+    <include
+        android:id="@+id/comment_title_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/home_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/comment_title_view" >
+
+        <RelativeLayout
+            android:id="@+id/comment_relative"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <RelativeLayout
+                android:id="@+id/edit_relative"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/comment_edit_bg" >
+
+                <TextView
+                    android:id="@+id/company_prestige"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="公司的信誉度" />
+
+                <RatingBar
+                    android:id="@+id/app_ratingbar"
+                    style="?android:attr/ratingBarStyleIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/company_prestige"
+                    android:layout_marginTop="4dip"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+                <EditText
+                    android:id="@+id/comment_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/app_ratingbar"
+                    android:background="@null"
+                    android:gravity="left|top"
+                    android:hint="@string/input_comment"
+                    android:lines="4"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/comment_edit"
+                    android:text="最多可输入100字"
+                    android:textColor="@color/darkgray"
+                    android:layout_alignParentRight="true"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/publish_comment"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_relative"
+                android:layout_margin="10dp"
+                android:background="@drawable/home_job_detail_link_bg"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/publish_comment"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <com.parttime.pullrefresh.PullToRefreshLayout
+            android:id="@+id/comment_refreshable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/comment_relative"
+            android:layout_margin="10dip"
+            android:background="@color/background_gray" >
+
+            <include layout="@layout/refresh_head" />
+            <!-- 支持所有实现Pullable接口的View -->
+
+            <com.parttime.pullrefresh.PullableListView
+                android:id="@+id/comment_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:divider="@color/lightgray"
+                android:dividerHeight="2dp" />
+
+            <include layout="@layout/load_more" />
+        </com.parttime.pullrefresh.PullToRefreshLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

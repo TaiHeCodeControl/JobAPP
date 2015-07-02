@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/company_details_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/title_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/company_details_title"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none"
+        android:requiresFadingEdge="none"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_gray"
+            android:orientation="vertical" >
+
+            <!-- 修改头像block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_details_modify_headimage_block"
+                android:layout_width="match_parent"
+                android:layout_height="125dip"
+                android:background="@color/white" >
+
+                <ImageView
+                    android:id="@+id/company_details_modify_headimage"
+                    android:layout_width="80dip"
+                    android:layout_height="80dip"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="15dip"
+                    android:background="@drawable/photo_frame_bg"
+                    android:contentDescription="@string/img_description"
+                    android:padding="5dip"
+                    android:scaleType="fitXY" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/personalinfo_list_divider_color" />
+            </RelativeLayout>
+
+            <!-- 企业性质 block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_details_property_block"
+                android:layout_width="match_parent"
+                android:layout_height="60dip"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/details_property_text_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dip"
+                    android:text="企业性质 : "
+                    android:textColor="@color/darkgray"
+                    android:textSize="17.0sp" />
+
+                <TextView
+                    android:id="@+id/details_property_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/textview_height"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_toRightOf="@id/details_property_text_tips"
+                    android:gravity="center_vertical"
+                    android:text="无"
+                    android:textColor="@color/darkgray"
+                    android:textSize="17.0sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:src="@drawable/personal_right_arrow" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/personalinfo_list_divider_color" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <!-- 企业名称  block -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_company_name_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dip"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:id="@+id/company_name_text_tips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30dip"
+                        android:text="企业名称 : "
+                        android:textColor="@color/darkgray"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@+id/company_name_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/textview_height"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_toRightOf="@id/company_name_text_tips"
+                        android:gravity="center_vertical"
+                        android:text="无"
+                        android:textColor="@color/darkgray"
+                        android:textSize="17.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:src="@drawable/personal_right_arrow" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:background="@color/personalinfo_list_divider_color" />
+                </RelativeLayout>
+                <!-- 企业地区  block -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_company_position_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dip"
+                    android:background="@color/white"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/company_position_text_tips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30dip"
+                        android:text="企业地区 : "
+                        android:textColor="@color/darkgray"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@+id/company_position_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/textview_height"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_toRightOf="@id/company_position_text_tips"
+                        android:gravity="center_vertical"
+                        android:text="无"
+                        android:textColor="@color/darkgray"
+                        android:textSize="17.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:src="@drawable/personal_right_arrow" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:background="@color/personalinfo_list_divider_color" />
+                </RelativeLayout>
+                <!-- 详细地址 block -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_details_position_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dip"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:id="@+id/details_position_text_tips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30dip"
+                        android:text="详细地址 : "
+                        android:textColor="@color/darkgray"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@+id/details_position_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/textview_height"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_toRightOf="@id/details_position_text_tips"
+                        android:gravity="center_vertical"
+                        android:text="无"
+                        android:textColor="@color/darkgray"
+                        android:textSize="17.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:src="@drawable/personal_right_arrow" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:background="@color/personalinfo_list_divider_color" />
+                </RelativeLayout>
+
+                <!-- 企业认证  block -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_company_confirm_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dip"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:id="@+id/company_confirm_text_tips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30dip"
+                        android:text="企业认证 : "
+                        android:textColor="@color/darkgray"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@+id/company_confirm_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/textview_height"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_toRightOf="@id/company_confirm_text_tips"
+                        android:gravity="center_vertical"
+                        android:text="无"
+                        android:textColor="@color/darkgray"
+                        android:textSize="17.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:src="@drawable/personal_right_arrow" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:background="@color/personalinfo_list_divider_color" />
+                </RelativeLayout>
+                <!-- 企业邮箱  block -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_company_email_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dip"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:id="@+id/company_email_text_tips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30dip"
+                        android:text="企业邮箱 : "
+                        android:textColor="@color/darkgray"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@+id/company_email_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/textview_height"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_toRightOf="@id/company_email_text_tips"
+                        android:gravity="center_vertical"
+                        android:text="无"
+                        android:textColor="@color/darkgray"
+                        android:textSize="17.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:src="@drawable/personal_right_arrow" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:background="@color/personalinfo_list_divider_color" />
+                </RelativeLayout>
+                <!-- 联系方式  block -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_company_contact_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dip"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:id="@+id/company_contact_text_tips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30dip"
+                        android:text="推荐码 : "
+                        android:textColor="@color/darkgray"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@+id/company_contact_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/textview_height"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_toRightOf="@id/company_contact_text_tips"
+                        android:gravity="center_vertical"
+                        android:text="无"
+                        android:textColor="@color/darkgray"
+                        android:textSize="17.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:src="@drawable/personal_right_arrow" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:background="@color/personalinfo_list_divider_color" />
+                </RelativeLayout>
+                <!-- 认证图片 block -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_company_identity_image_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dip"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:id="@+id/company_identity_image_text_tips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30dip"
+                        android:text="上传营业执照: "
+                        android:textColor="@color/darkgray"
+                        android:textSize="17.0sp" />
+
+                    <ImageView
+                        android:id="@+id/company_identity_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:src="@drawable/personal_right_arrow" />
+
+                    <ImageView
+                        android:id="@+id/company_identity_image"
+                        android:layout_width="50dip"
+                        android:layout_height="50dip"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@id/company_identity_arrow"
+                        android:background="@drawable/photo_frame_bg"
+                        android:gravity="center_vertical"
+                        android:text="无"
+                        android:textColor="@color/darkgray"
+                        android:textSize="17.0sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:background="@color/personalinfo_list_divider_color" />
+                </RelativeLayout>
+                <!-- 完成按钮  block -->
+
+                <TextView
+                    android:id="@+id/company_complete_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dip"
+                    android:layout_margin="20dip"
+                    android:background="@drawable/login_btn_bg_selector"
+                    android:gravity="center"
+                    android:text="完成"
+                    android:textColor="@color/white"
+                    android:textSize="17.0sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/edit_dialog_layout" />
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        layout="@layout/dlg_waiting_layout" />
+
+</RelativeLayout>

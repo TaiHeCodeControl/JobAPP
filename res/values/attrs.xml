@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <declare-styleable name="ParallaxScrollView">
+       <attr name="zoomRatio" format="float" />
+   </declare-styleable>
+   
+   
+       <declare-styleable name="MaskImage">
+
+        <!-- Identifier for the image that represents the Imageview's content. -->
+        <attr name="image" format="reference" />
+        <!-- crop Imageview's content same as mask -->
+        <attr name="mask" format="reference" />
+        <!-- Background Image -->
+        <attr name="frame" format="reference" />
+    </declare-styleable>
+    
+    
+	<declare-styleable name="RoundAngleImageView">
+		<attr name="roundWidth" format="dimension" />
+		<attr name="roundHeight" format="dimension" />
+	</declare-styleable>
+	
+	
+	<declare-styleable name="JazzyViewPager">
+        <attr name="style">
+            <enum name="standard" value="0" />
+            <enum name="tablet" value="1" />
+            <enum name="cubein" value="2" />
+            <enum name="cubeout" value="3" />
+            <enum name="flipvertical" value="4" />
+            <enum name="fliphorizontal" value="5" />
+            <enum name="stack" value="6" />
+            <enum name="zoomin" value="7" />
+            <enum name="zoomout" value="8" />
+            <enum name="rotateup" value="9" />
+            <enum name="rotatedown" value="10" />
+            <enum name="accordion" value="11" />
+        </attr>
+        <attr name="fadeEnabled" format="boolean" />
+        <attr name="outlineEnabled" format="boolean" />
+        <attr name="outlineColor" format="color|reference" />
+    </declare-styleable>
+    
+	
+	  <declare-styleable name="roundedimageview">
+        <attr name="border_thickness" format="dimension" />
+        <attr name="border_inside_color" format="color" />
+        <attr name="border_outside_color" format="color"></attr>
+    </declare-styleable>
+</resources>

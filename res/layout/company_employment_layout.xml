@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/employment_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/home_title" />
+    
+     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_below="@id/employment_title"
+        android:background="@color/background_gray" >
+
+        <ListView
+            android:id="@+id/employment_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:background="@color/white"
+            android:divider="@color/background_gray"
+            android:dividerHeight="5dip"
+            android:listSelector="@color/listview_item_selector_color"
+            android:scrollbars="none" >
+        </ListView>
+    </RelativeLayout>
+	<include
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/employment_title"
+        layout="@layout/dlg_waiting_layout" />
+</RelativeLayout>

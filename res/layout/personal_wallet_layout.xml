@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/wallet_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/home_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none"
+        android:requiresFadingEdge="none"
+        android:layout_below="@id/wallet_title"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <!-- 账户余额  block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_wallet_count_remiand_block"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="60dip" >
+
+                <ImageView
+                    android:id="@+id/remaind_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:contentDescription="@string/img_description"
+                    android:src="@drawable/pay_icon" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_remaind_text_block"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/remaind_icon" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/wallet_account_remaind"
+                        android:textColor="@color/darkgray"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@+id/account_remaind"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dip"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="17.0sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/personalinfo_list_divider_color" />
+            </RelativeLayout>
+
+            <!-- 我的银行卡  block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_wallet_bankcard_block"
+                android:layout_width="match_parent"
+                android:layout_height="60dip" >
+
+                <ImageView
+                    android:id="@+id/bankcard_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:contentDescription="@string/img_description"
+                    android:src="@drawable/bank_number_icon" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_bankcard_text_block"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/bankcard_icon" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/wallet_my_bankcard"
+                        android:textColor="@color/darkgray"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@+id/bankcard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dip"
+                        android:text="1张"
+                        android:textColor="@color/black"
+                        android:textSize="17.0sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/personalinfo_list_divider_color" />
+            </RelativeLayout>
+            <!-- 我的支付宝  block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_wallet_alipay_block"
+                android:layout_width="match_parent"
+                android:layout_height="60dip" >
+
+                <ImageView
+                    android:id="@+id/alipay_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:contentDescription="@string/img_description"
+                    android:src="@drawable/pay_icon" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_alipay_text_block"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/alipay_icon" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/wallet_my_alipay"
+                        android:textColor="@color/darkgray"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@+id/alipay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dip"
+                        android:text="baiyingbin5@163.com"
+                        android:textColor="@color/black"
+                        android:textSize="17.0sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/edit_dialog_layout" />
+</RelativeLayout>

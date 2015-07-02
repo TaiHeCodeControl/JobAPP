@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <string-array name="gender_selection">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+    <string-array name="attach_pic_no_del">
+        <item>手机相册</item>
+        <item>相机拍摄</item>
+    </string-array>
+    <string-array name="attach_picture">
+        <item>手机相册</item>
+        <item>相机拍摄</item>
+    </string-array>
+    <string-array name="attach_video">
+        <item>手机相册</item>
+        <item>相机拍摄</item>
+    </string-array>
+    <string-array name="attach_audio">
+        <item>选择音频文件</item>
+        <item>录音</item>
+    </string-array>
+    
+    <string-array name="task_type">
+        <item>已申请</item>
+        <item>进行中</item>
+      <!--   <item>被录用</item>
+        <item>已完成</item> -->
+    </string-array>
+    <string-array name="sing_day_num">
+        <item>1天</item>
+        <item>2天</item>
+        <item>3天</item>
+        <item>4天</item>
+        <item>5天</item>
+        <item>6天</item>
+        <item>7天</item>
+        <item>8天</item>
+        <item>9天</item>
+    </string-array>
+     
+</resources>

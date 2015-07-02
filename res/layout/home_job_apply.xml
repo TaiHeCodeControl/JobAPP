@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_gray" >
+
+        <include
+            android:id="@+id/job_title_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/home_title" />
+
+        <RelativeLayout
+            android:id="@+id/relative_investaccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/job_title_view"
+            android:layout_marginTop="@dimen/home_job_apply_margin_top"
+            android:background="@color/white" >
+
+            <TextView
+                android:id="@+id/job_brief"
+                style="@style/system_2wrap"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/home_job_apply_margin_top"
+                android:text="@string/home_job_biref" />
+
+            <EditText
+                android:id="@+id/job_brief_text"
+                style="@style/system_2wrap"
+                android:layout_marginLeft="@dimen/home_job_apply_margin_left"
+                android:layout_marginTop="@dimen/home_job_apply_margin_top"
+                android:layout_toRightOf="@id/job_brief"
+                android:background="@android:color/transparent"
+                android:hint="@string/home_job_biref_tip" />
+            
+            <View 
+                android:layout_width="fill_parent"
+                android:layout_height="0.5px"
+                android:background="@color/black"
+                android:layout_below="@id/job_brief"
+                android:layout_marginTop="@dimen/home_job_apply_margin_top"
+                android:layout_marginBottom="@dimen/home_job_apply_margin_top"
+                android:id="@+id/job_brief_line"
+                />
+
+            <TextView
+                android:id="@+id/name"
+                style="@style/system_2wrap"
+                android:layout_alignRight="@id/job_brief"
+                android:layout_below="@id/job_brief_line"
+                android:text="@string/home_name" />
+
+            <EditText
+                android:id="@+id/name_text"
+                style="@style/system_2wrap"
+                android:layout_below="@id/job_brief_line"
+                android:layout_marginLeft="@dimen/home_job_apply_margin_left"
+                android:layout_toRightOf="@id/name"
+                android:background="@android:color/transparent"
+                android:hint="@string/home_name_tip" />
+            
+            <View 
+                android:layout_width="fill_parent"
+                android:layout_height="0.5px"
+                android:background="@color/black"
+                android:layout_below="@id/name"
+                android:layout_marginTop="@dimen/home_job_apply_margin_top"
+                android:layout_marginBottom="@dimen/home_job_apply_margin_top"
+                android:id="@+id/name_line"
+                />
+
+            <TextView
+                android:id="@+id/sex"
+                style="@style/system_2wrap"
+                android:layout_alignRight="@id/job_brief"
+                android:layout_below="@id/name_line"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/home_sex" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name_line"
+                android:layout_marginLeft="@dimen/home_job_apply_margin_left"
+                android:layout_toRightOf="@id/name"
+                android:checkedButton="@+id/male"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/ios7_radio_left_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/male"
+                    android:textColor="@drawable/selector_text_color"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/ios7_radio_right_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/female"
+                    android:textColor="@drawable/selector_text_color"
+                    android:textSize="16sp" />
+            </RadioGroup>
+            
+            <View 
+                android:layout_width="fill_parent"
+                android:layout_height="0.5px"
+                android:background="@color/black"
+                android:layout_below="@id/sex"
+                android:layout_marginTop="@dimen/home_job_apply_margin_top"
+                android:layout_marginBottom="@dimen/home_job_apply_margin_top"
+                android:id="@+id/sex_line"
+                />
+
+            <TextView
+                android:id="@+id/qq"
+                style="@style/system_2wrap"
+                android:layout_alignRight="@id/job_brief"
+                android:layout_below="@id/sex_line"
+                android:text="@string/home_qq" />
+
+            <EditText
+                android:id="@+id/qq_text"
+                style="@style/system_2wrap"
+                android:layout_below="@id/sex_line"
+                android:layout_marginLeft="@dimen/home_job_apply_margin_left"
+                android:layout_toRightOf="@id/name"
+                android:background="@android:color/transparent"
+                android:hint="@string/home_qq_tip" />
+            
+               <View 
+                android:layout_width="fill_parent"
+                android:layout_height="0.5px"
+                android:background="@color/black"
+                android:layout_below="@id/qq"
+                android:layout_marginTop="@dimen/home_job_apply_margin_top"
+                android:layout_marginBottom="@dimen/home_job_apply_margin_top"
+                android:id="@+id/qq_line"
+                />
+
+            <TextView
+                android:id="@+id/phone"
+                style="@style/system_2wrap"
+                android:layout_alignRight="@id/job_brief"
+                android:layout_below="@id/qq_line"
+                android:text="@string/home_phone" />
+
+            <EditText
+                android:id="@+id/phone_text"
+                style="@style/system_2wrap"
+                android:layout_below="@id/qq_line"
+                android:layout_marginLeft="@dimen/home_job_apply_margin_left"
+                android:layout_toRightOf="@id/name"
+                android:background="@android:color/transparent"
+                android:hint="@string/home_phone_tip" />
+            
+                 <View 
+                android:layout_width="fill_parent"
+                android:layout_height="0.5px"
+                android:background="@color/black"
+                android:layout_below="@id/phone"
+                android:layout_marginTop="@dimen/home_job_apply_margin_top"
+                android:layout_marginBottom="@dimen/home_job_apply_margin_top"
+                android:id="@+id/phone_line"
+                />
+
+            <TextView
+                android:id="@+id/mail"
+                style="@style/system_2wrap"
+                android:layout_alignRight="@id/job_brief"
+                android:layout_below="@id/phone_line"
+                android:text="@string/home_mail" />
+
+            <EditText
+                android:id="@+id/mail_text"
+                style="@style/system_2wrap"
+                android:layout_below="@id/phone_line"
+                android:layout_marginLeft="@dimen/home_job_apply_margin_left"
+                android:layout_toRightOf="@id/name"
+                android:background="@android:color/transparent"
+                android:hint="@string/home_mail_tip" />
+            
+                 <View 
+                android:layout_width="fill_parent"
+                android:layout_height="0.5px"
+                android:background="@color/black"
+                android:layout_below="@id/mail"
+                android:layout_marginTop="@dimen/home_job_apply_margin_top"
+                android:layout_marginBottom="@dimen/home_job_apply_margin_top"
+                android:id="@+id/mail_line"
+                />
+
+            <TextView
+                android:id="@+id/city"
+                style="@style/system_2wrap"
+                android:layout_alignRight="@id/job_brief"
+                android:layout_below="@id/mail_line"
+                android:text="@string/home_city" />
+
+            <EditText
+                android:id="@+id/city_text"
+                style="@style/system_2wrap"
+                android:layout_below="@id/mail_line"
+                android:layout_marginLeft="@dimen/home_job_apply_margin_left"
+                android:layout_toRightOf="@id/name"
+                android:background="@android:color/transparent"
+                android:hint="@string/home_phone_tip" />
+            
+                 <View 
+                android:layout_width="fill_parent"
+                android:layout_height="0.5px"
+                android:background="@color/black"
+                android:layout_below="@id/city"
+                android:layout_marginTop="@dimen/home_job_apply_margin_top"
+                android:layout_marginBottom="@dimen/home_job_apply_margin_top"
+                android:id="@+id/city_line"
+                />
+
+            <TextView
+                android:id="@+id/job_intension"
+                style="@style/system_2wrap"
+                android:layout_alignRight="@id/job_brief"
+                android:layout_below="@id/city_line"
+                android:text="@string/home_job_intension" />
+
+            <EditText
+                android:id="@+id/job_intension_text"
+                style="@style/system_2wrap"
+                android:layout_below="@id/city_line"
+                android:layout_marginLeft="@dimen/home_job_apply_margin_left"
+                android:layout_toRightOf="@id/name"
+                android:background="@android:color/transparent"
+                android:hint="@string/home_job_intension_tip" />
+            
+                 <View 
+                android:layout_width="fill_parent"
+                android:layout_height="0.5px"
+                android:background="@color/black"
+                android:layout_below="@id/job_intension"
+                android:layout_marginTop="@dimen/home_job_apply_margin_top"
+                android:layout_marginBottom="@dimen/home_job_apply_margin_top"
+                android:id="@+id/job_intension_line"
+                />
+
+            <TextView
+                android:id="@+id/job_parttime"
+                style="@style/system_2wrap"
+                android:layout_alignRight="@id/job_brief"
+                android:layout_below="@id/job_intension_line"
+                android:text="@string/home_parttime" />
+
+            <EditText
+                android:id="@+id/job_parttime_text"
+                style="@style/system_2wrap"
+                android:layout_below="@id/job_intension_line"
+                android:layout_marginLeft="@dimen/home_job_apply_margin_left"
+                android:layout_toRightOf="@id/name"
+                android:background="@android:color/transparent"
+                android:hint="@string/home_parttime_tip" />
+            
+                 <View 
+                android:layout_width="fill_parent"
+                android:layout_height="0.5px"
+                android:background="@color/black"
+                android:layout_below="@id/job_parttime"
+                android:layout_marginTop="@dimen/home_job_apply_margin_top"
+                android:layout_marginBottom="@dimen/home_job_apply_margin_top"
+                android:id="@+id/job_parttime_line"
+                />
+
+            <TextView
+                android:id="@+id/height"
+                style="@style/system_2wrap"
+                android:layout_alignRight="@id/job_brief"
+                android:layout_below="@id/job_parttime_line"
+                android:text="@string/home_height" />
+
+            <EditText
+                android:id="@+id/height_text"
+                style="@style/system_2wrap"
+                android:layout_below="@id/job_parttime_line"
+                android:layout_marginLeft="@dimen/home_job_apply_margin_left"
+                android:layout_toRightOf="@id/name"
+                android:background="@android:color/transparent"
+                android:hint="@string/home_parttime_tip" />
+            
+                 <View 
+                android:layout_width="fill_parent"
+                android:layout_height="0.5px"
+                android:background="@color/black"
+                android:layout_below="@id/height"
+                android:layout_marginTop="@dimen/home_job_apply_margin_top"
+                android:layout_marginBottom="@dimen/home_job_apply_margin_top"
+                android:id="@+id/height_line"
+                />
+
+            <TextView
+                android:id="@+id/birth"
+                style="@style/system_2wrap"
+                android:layout_alignRight="@id/job_brief"
+                android:layout_below="@id/height_line"
+                android:text="@string/home_birth" />
+
+            <EditText
+                android:id="@+id/birth_text"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/height_line"
+                android:layout_marginLeft="@dimen/home_job_apply_margin_left"
+                android:layout_toRightOf="@id/name"
+                android:background="@android:color/transparent" />
+            
+                 <View 
+                android:layout_width="fill_parent"
+                android:layout_height="0.5px"
+                android:background="@color/black"
+                android:layout_below="@id/birth"
+                android:layout_marginTop="@dimen/home_job_apply_margin_top"
+                android:layout_marginBottom="@dimen/home_job_apply_margin_top"
+                android:id="@+id/birth_line"
+                />
+
+            <TextView
+                android:id="@+id/student"
+                style="@style/system_2wrap"
+                android:layout_alignRight="@id/job_brief"
+                android:layout_below="@id/birth_line"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/home_student" />
+
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/birth_line"
+                android:layout_marginLeft="@dimen/home_job_apply_margin_left"
+                android:layout_toRightOf="@id/name"
+                android:checkedButton="@+id/is_student"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/is_student"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/ios7_radio_left_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/is"
+                    android:textColor="@drawable/selector_text_color"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/not_student"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/ios7_radio_right_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/not"
+                    android:textColor="@drawable/selector_text_color"
+                    android:textSize="16sp" />
+            </RadioGroup>
+            
+            
+                 <View 
+                android:layout_width="fill_parent"
+                android:layout_height="0.5px"
+                android:background="@color/black"
+                android:layout_below="@id/student"
+                android:layout_marginTop="@dimen/home_job_apply_margin_top"
+                android:layout_marginBottom="@dimen/home_job_apply_margin_top"
+                android:id="@+id/student_line"
+                />
+
+            <TextView
+                android:id="@+id/education"
+                style="@style/system_2wrap"
+                android:layout_alignRight="@id/job_brief"
+                android:layout_below="@id/student_line"
+                android:text="@string/home_education" />
+
+            <EditText
+                android:id="@+id/education_text"
+                style="@style/system_2wrap"
+                android:layout_below="@id/student_line"
+                android:layout_marginLeft="@dimen/home_job_apply_margin_left"
+                android:layout_toRightOf="@id/name"
+                android:background="@android:color/transparent" />
+            
+                 <View 
+                android:layout_width="fill_parent"
+                android:layout_height="0.5px"
+                android:background="@color/black"
+                android:layout_below="@id/education"
+                android:layout_marginTop="@dimen/home_job_apply_margin_top"
+                android:layout_marginBottom="@dimen/home_job_apply_margin_top"
+                android:id="@+id/education_line"
+                />
+
+            <TextView
+                android:id="@+id/self_introduction"
+                style="@style/system_2wrap"
+                android:layout_alignRight="@id/job_brief"
+                android:layout_below="@id/education_line"
+                android:text="@string/home_self_introduction" />
+
+            <EditText
+                android:id="@+id/self_introduction_text"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/education_line"
+                android:layout_marginLeft="@dimen/home_job_apply_margin_left"
+                android:layout_toRightOf="@id/name"
+                android:background="@android:color/transparent" />
+
+            <Button
+                style="@style/system_macth_wrap"
+                android:layout_below="@id/self_introduction"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:text="@string/confirm" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>

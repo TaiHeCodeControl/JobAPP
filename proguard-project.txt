@@ -1,0 +1,149 @@
+# This is a configuration file for ProGuard. 
+# http://proguard.sourceforge.net/index.html#manual/usage.html 
+
+-dontusemixedcaseclassnames#混淆时不会产生形形色色的类名
+-dontskipnonpubliclibraryclasses #指定不去忽略非公共的库类
+-dontpreverify #不预校验
+
+-dontshrink#不压缩输入的类文件   
+-dontoptimize#不优化输入的类文件  
+-ignorewarnings 
+#-dontoptimize 
+
+-verbose 
+
+# Optimization is turned off by default. Dex does not like code run 
+# through the ProGuard optimize and preverify steps (and performs some 
+# of these optimizations on its own). 
+# Note that if you want to enable optimization, you cannot just 
+# include optimization flags in your own project configuration file; 
+# instead you will need to point to the 
+# "proguard-android-optimize.txt" file instead of this one from your 
+# project.properties file. 
+
+
+#处理本APP中的类
+#-dontwarn com.google.android.gms.**
+#-dontwarn com.easemob.applib.**
+#-dontwarn com.easemob.chatuidemo.**
+#-dontwarn com.parttime.application.**
+#-dontwarn com.parttime.activity.**
+#-dontwarn com.parttime.data.**
+#-dontwarn com.parttime.adapter.**
+#-dontwarn com.parttime.filedownload.**
+#-dontwarn com.parttime.fragment.**
+#-dontwarn com.parttime.pullrefresh.**
+#-dontwarn com.parttime.utils.**
+#-dontwarn com.parttime.parttimejob.R
+#-keep class com.parttime.utils.**{*;}
+
+# The support library contains references to newer platform versions.
+# Don't warn about those in case this app is linking against an older
+# platform version.  We know about them, and they are safe.
+#-dontwarn和-keep 结合使用，意思是保持com.xx.bbb.**这个包里面的所有类和所有方法而不混淆，接着还叫ProGuard不要警告找不到com.xx.bbb.**这个包里面的类的相关引用。
+
+###############SupportV4############################# 
+-dontwarn android.support.**
+-libraryjars /libs/android-support-v4.jar
+-dontwarn android.support.v4.**
+-keep class android.support.v4.**{
+ *;
+}
+###############SupportV4############################# 
+
+###############universal-image-loader#############################
+-libraryjars /libs/universal-image-loader-1.9.1.jar
+-dontwarn com.nostra13.universalimageloader.**
+-keep class com.nostra13.universalimageloader.** {  
+  *;  
+ } 
+###############universal-image-loader#############################
+
+###############baidumap#############################
+-libraryjars /libs/BaiduLBS_Android.jar
+-dontwarn com.baidu.mapapi.**
+-keep class com.baidu.mapapi.** {  
+  *;  
+ } 
+###############baidumap#############################
+
+###############easemobchat#############################
+-libraryjars /libs/easemobchat_2.1.6.jar
+-dontwarn com.easemob.**
+-keep class com.baidu.easemob.** {  
+  *;  
+ } 
+###############easemobchat#############################
+
+###############commons-codec#############################
+-libraryjars /libs/commons-codec.jar
+-dontwarn org.apache.**
+-keep class org.apache.commons.codec.** {  
+  *;  
+ } 
+###############easemobchat#############################
+
+
+######################固定写法####################################
+-keepattributes *Annotation* 
+-keep public class com.google.vending.licensing.ILicensingService 
+-keep public class com.android.vending.licensing.ILicensingService
+
+-keepclassmembers class * extends android.app.Activity {
+   public void *(android.view.View);
+}
+
+-keepclassmembers public class * extends android.view.View {
+   void set*(***);
+   *** get*();
+}
+
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+-keep class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator *;
+}
+-keepclassmembers class **.R$* {
+    public static <fields>;
+}
+-keep class **.R$* {   
+    *;   
+}
+-keepclassmembers class * {
+ public <methods>;
+}
+-keep class * extends java.lang.annotation.Annotation { *; }
+-keep class com.bgb.scan.model.** {
+   *;
+ }
+ 
+-keep class com.bgb.scan.model.** {
+   *;
+}
+ 
+-keep class sun.misc.Unsafe { 
+  *;
+} 
+
+-keepnames class * implements java.io.Serializable
+
+-keepclassmembers class * implements java.io.Serializable { 
+  static final long serialVersionUID; 
+  private static final java.io.ObjectStreamField[] serialPersistentFields; 
+  private void writeObject(java.io.ObjectOutputStream); 
+  private void readObject(java.io.ObjectInputStream); 
+  java.lang.Object writeReplace(); 
+  java.lang.Object readResolve(); 
+} 
+-keep class com.badlogic.** { *; } 
+-keep class * implements com.badlogic.gdx.utils.Json* 
+-keep class com.google.** { *; }
+-keep class org.json.**{*;}
+  
+# For native methods, see http://proguard.sourceforge.net/manual/examples.html#native
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+######################固定写法####################################

@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/publish_volunteer_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/home_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/publish_volunteer_title"
+        android:background="@color/background_gray"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none"
+        android:requiresFadingEdge="none"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dip"
+            android:background="@color/background_gray"
+            android:orientation="vertical" >
+
+            <!-- 求助人block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_volunteer_block"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="@color/white" >
+
+                <LinearLayout
+                    android:id="@+id/volunteer_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_volunteer_text_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.0" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="求助人 "
+                            android:textColor="@color/darkgray"
+                            android:textSize="17.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_volunteer_content_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3" >
+
+                        <EditText
+                            android:id="@+id/volunteer_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dip"
+                            android:layout_marginLeft="20dip"
+                            android:layout_marginRight="20dip"
+                            android:background="@drawable/feadback_back"
+                            android:drawablePadding="6dp"
+                            android:ellipsize="end"
+                            android:gravity="left|center_vertical"
+                            android:hint="请输入信息……"
+                            android:padding="6dip"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/personalinfo_list_divider_color" />
+            </RelativeLayout>
+            <!-- 求助主题block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_volunteer_title_block"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="@color/white" >
+
+                <LinearLayout
+                    android:id="@+id/volunteer_title_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_volunteer_title_text_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.0" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="求助主题"
+                            android:textColor="@color/darkgray"
+                            android:textSize="17.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_volunteer_title_content_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3" >
+
+                        <EditText
+                            android:id="@+id/volunteer_title_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dip"
+                            android:layout_marginLeft="20dip"
+                            android:layout_marginRight="20dip"
+                            android:background="@drawable/feadback_back"
+                            android:drawablePadding="6dp"
+                            android:ellipsize="end"
+                            android:gravity="left|center_vertical"
+                            android:hint="请输入信息……"
+                            android:padding="6dip"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/personalinfo_list_divider_color" />
+            </RelativeLayout>
+
+            <!-- 求助详情block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_volunteer_details_block"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@color/white" >
+
+                <LinearLayout
+                    android:id="@+id/volunteer_details_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_volunteer_details_text_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dip"
+                        android:layout_weight="1.0" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="求助详情"
+                            android:textColor="@color/darkgray"
+                            android:textSize="17.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_volunteer_details_content_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:layout_weight="3" >
+
+                        <EditText
+                            android:id="@+id/volunteer_details_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dip"
+                            android:layout_marginLeft="20dip"
+                            android:layout_marginRight="20dip"
+                            android:layout_marginTop="15dip"
+                            android:background="@drawable/feadback_back"
+                            android:drawablePadding="6dp"
+                            android:ellipsize="end"
+                            android:gravity="top"
+                            android:hint="请输入信息……"
+                            android:padding="6dip"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+
+                        <ImageView
+                            android:id="@+id/volunteer_image_show"
+                            android:layout_width="60dip"
+                            android:layout_height="60dip"
+                            android:layout_below="@id/volunteer_details_content"
+                            android:layout_marginLeft="15dip"
+                            android:layout_marginTop="5dip"
+                            android:background="@drawable/photo_frame_bg"
+                            android:contentDescription="@string/img_description"
+                            android:padding="5dip"
+                            android:scaleType="fitXY" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/volunteer_details_block"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/personalinfo_list_divider_color" />
+            </RelativeLayout>
+            <!-- 求助人电话block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_volunteer_tel_block"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:layout_marginTop="10dip"
+                android:background="@color/white" >
+
+                <LinearLayout
+                    android:id="@+id/volunteer_tel_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_volunteer_tel_text_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.0" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="求助电话"
+                            android:textColor="@color/darkgray"
+                            android:textSize="17.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_volunteer_tel_content_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3" >
+
+                        <EditText
+                            android:id="@+id/volunteer_tel_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dip"
+                            android:layout_marginLeft="20dip"
+                            android:layout_marginRight="20dip"
+                            android:background="@drawable/feadback_back"
+                            android:drawablePadding="6dp"
+                            android:ellipsize="end"
+                            android:inputType="number"
+                            android:gravity="left|center_vertical"
+                            android:hint="请输入信息……"
+                            android:padding="6dip"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/personalinfo_list_divider_color" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@color/white"
+                android:paddingBottom="20dip" >
+
+                <TextView
+                    android:id="@+id/employment_tips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dip"
+                    android:gravity="center"
+                    android:textColor="@color/red"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/employment_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dip"
+                    android:layout_below="@id/employment_tips"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dip"
+                    android:layout_marginLeft="20dip"
+                    android:layout_marginRight="20dip"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/btn_selector"
+                    android:gravity="center"
+                    android:text="发布求助"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        layout="@layout/dlg_waiting_layout" />
+
+</RelativeLayout>

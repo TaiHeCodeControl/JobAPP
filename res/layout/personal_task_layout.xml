@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/home_title" />
+
+    <RelativeLayout
+        android:id="@+id/task_details_select"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginTop="15dip"
+        android:background="@drawable/drop_down_box_bg"
+        android:gravity="center_vertical"
+        android:visibility="gone" >
+
+        <TextView
+            style="@style/text_style_center_vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dip"
+            android:singleLine="true"
+            android:text="任务详情"
+            android:textSize="16sp" />
+
+        <com.parttime.view.MyImageSpinner
+            android:id="@+id/task_details_type"
+            style="@style/main_myspinnerle"
+            android:layout_width="100dip"
+            android:layout_height="30dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dip"
+            android:background="@drawable/drop_down_box_bg"
+            android:gravity="left|center_vertical"
+            android:spinnerMode="dropdown" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:layout_marginTop="3dip"
+            android:background="@color/lightgray"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/task_item_block"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dip"
+        android:visibility="gone" >
+
+        <ListView
+            android:id="@+id/task_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:divider="@color/lightgray"
+            android:dividerHeight="1.0dp"
+            android:fadingEdge="none"
+            android:footerDividersEnabled="false"
+            android:listSelector="@color/listview_item_selector_color"
+            android:scrollbars="none" />
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            layout="@layout/dlg_waiting_layout" />
+    </RelativeLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        layout="@layout/personal_task_sign_layout" />
+   
+
+</LinearLayout>

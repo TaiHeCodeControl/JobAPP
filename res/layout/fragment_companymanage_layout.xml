@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray" >
+
+    <LinearLayout
+        android:id="@+id/cmanage_content_card"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="5dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/cmanage_employer"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@color/main_btn_press"
+            android:gravity="center"
+            android:text="用工管理"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/cmanage_job"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="职位管理"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/cmanage_line"
+        android:layout_width="match_parent"
+        android:layout_height="5dip"
+        android:layout_below="@id/cmanage_content_card"
+        android:background="@color/background_gray" />
+
+    <com.parttime.pullrefresh.PullToRefreshLayout
+        android:id="@+id/cmanage_refreshable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cmanage_line"
+        android:background="@color/white" >
+
+        <include layout="@layout/refresh_head" />
+
+        <com.parttime.pullrefresh.PullableListView
+            android:id="@+id/cmanage_content_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:divider="@color/background_gray"
+            android:dividerHeight="1dip" />
+
+        <include layout="@layout/load_more" />
+    </com.parttime.pullrefresh.PullToRefreshLayout>
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cmanage_line"
+        layout="@layout/dlg_waiting_layout" />
+
+</RelativeLayout>

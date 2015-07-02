@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/job_item_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/register_bg" />
+
+    <RelativeLayout
+        android:id="@+id/job_detail_relative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/job_item_image" >
+
+        <TextView
+            android:id="@+id/job_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="寿司店小时工" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/job_name"
+            android:background="@drawable/job_item_time_bg"
+            android:padding="5dp"
+            android:text="时" />
+
+        <TextView
+            android:id="@+id/job_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/job_name"
+            android:paddingTop="10dp"
+            android:text="@string/confirm" />
+
+        <TextView
+            android:id="@+id/job_linkman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/job_type"
+            android:paddingTop="10dp"
+            android:text="@string/confirm" />
+
+        <ImageView
+            android:id="@+id/job_time_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/job_type"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/job_linkman"
+            android:background="@drawable/radio_press" />
+
+        <TextView
+            android:id="@+id/job_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/job_type"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/job_time_sign"
+            android:text="2015-01-12" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/job_item_location_relative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/job_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="30元/小时" />
+
+        <TextView
+            android:id="@+id/job_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/job_price"
+            android:layout_marginTop="16dp"
+            android:text="昌平区/300m" />
+
+        <ImageView
+            android:id="@+id/job_distance_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/job_distance"
+            android:layout_toLeftOf="@+id/job_distance"
+            android:background="@drawable/radio_press" />
+    </RelativeLayout>
+
+</RelativeLayout>

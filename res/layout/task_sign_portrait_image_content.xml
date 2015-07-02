@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:maskimage="http://schemas.android.com/apk/res/com.parttime.parttimejob"
+    android:id="@+id/sign_content_block"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <!-- 标头 -->
+
+    <LinearLayout
+        android:id="@+id/sign_header_block"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:layout_width="@dimen/task_sign_item_point_width_height"
+                android:layout_height="@dimen/task_sign_item_height"
+                android:layout_alignParentRight="true"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:visibility="visible" >
+
+                <View
+                    android:id="@+id/sign_header_line"
+                    android:layout_width="2dip"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="@dimen/task_sign_item_line_padding"
+                    android:background="@color/lightgray" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <TextView
+                style="@style/text_sign_style"
+                android:layout_centerInParent="true"
+                android:text="签到" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <TextView
+                style="@style/text_sign_style"
+                android:layout_centerInParent="true"
+                android:text="签退" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- 第一天 -->
+
+    <LinearLayout
+        android:id="@+id/sign_first_day_portrait_block"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/task_sign_item_height"
+        android:layout_below="@id/sign_header_block"
+        android:background="@color/white"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:layout_width="@dimen/task_sign_item_point_width_height"
+                android:layout_height="@dimen/task_sign_item_height"
+                android:layout_alignParentRight="true"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:visibility="visible" >
+
+                <View
+                    android:id="@+id/sign_first_day_portrait_line"
+                    android:layout_width="2dip"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="@dimen/task_sign_item_line_padding"
+                    android:background="@color/lightgray" />
+
+                <ImageView
+                    android:id="@+id/sign_first_day_portrait_point"
+                    android:layout_width="@dimen/task_sign_item_point_width_height"
+                    android:layout_height="@dimen/task_sign_item_point_width_height"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/img_description"
+                    android:src="@drawable/unsigned_point_icon" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/text_sign_style"
+                android:layout_centerInParent="true"
+                android:text="第一天" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <com.parttime.view.MaskImage
+                android:id="@+id/sign_on_first_day_portrait_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:background="@drawable/signed_on_default"
+                android:contentDescription="@string/img_description"
+                maskimage:frame="@drawable/personal_center_head_frame"
+                maskimage:image="@drawable/signed_on_default"
+                maskimage:mask="@drawable/personal_center_head_mask_small" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <com.parttime.view.MaskImage
+                android:id="@+id/sign_off_first_day_portrait_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:background="@drawable/signed_on_default"
+                android:contentDescription="@string/img_description"
+                maskimage:frame="@drawable/personal_center_head_frame"
+                maskimage:image="@drawable/signed_off_default"
+                maskimage:mask="@drawable/personal_center_head_mask_small" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- 第二天 -->
+
+    <LinearLayout
+        android:id="@+id/sign_second_day_portrait_block"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/task_sign_item_height"
+        android:layout_below="@id/sign_first_day_portrait_block"
+        android:background="@color/white"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:layout_width="@dimen/task_sign_item_point_width_height"
+                android:layout_height="@dimen/task_sign_item_height"
+                android:layout_alignParentRight="true"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:visibility="visible" >
+
+                <View
+                    android:id="@+id/sign_second_day_portrait_line"
+                    android:layout_width="2dip"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="@dimen/task_sign_item_line_padding"
+                    android:background="@color/lightgray" />
+
+                <ImageView
+                    android:id="@+id/sign_second_day_portrait_point"
+                    android:layout_width="@dimen/task_sign_item_point_width_height"
+                    android:layout_height="@dimen/task_sign_item_point_width_height"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/img_description"
+                    android:src="@drawable/unsigned_point_icon" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/text_sign_style"
+                android:layout_centerInParent="true"
+                android:text="第二天" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <com.parttime.view.MaskImage
+                android:id="@+id/sign_on_second_day_portrait_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:background="@drawable/signed_on_default"
+                android:contentDescription="@string/img_description"
+                maskimage:frame="@drawable/personal_center_head_frame"
+                maskimage:image="@drawable/signed_on_default"
+                maskimage:mask="@drawable/personal_center_head_mask_small" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <com.parttime.view.MaskImage
+                android:id="@+id/sign_off_second_day_portrait_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:background="@drawable/signed_on_default"
+                android:contentDescription="@string/img_description"
+                maskimage:frame="@drawable/personal_center_head_frame"
+                maskimage:image="@drawable/signed_off_default"
+                maskimage:mask="@drawable/personal_center_head_mask_small" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- 第三天 -->
+
+    <LinearLayout
+        android:id="@+id/sign_third_day_portrait_block"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/task_sign_item_height"
+        android:layout_below="@id/sign_second_day_portrait_block"
+        android:background="@color/white"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:layout_width="@dimen/task_sign_item_point_width_height"
+                android:layout_height="@dimen/task_sign_item_height"
+                android:layout_alignParentRight="true"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:visibility="visible" >
+
+                <View
+                    android:id="@+id/sign_third_day_portrait_line"
+                    android:layout_width="2dip"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="@dimen/task_sign_item_line_padding"
+                    android:background="@color/lightgray" />
+
+                <ImageView
+                    android:id="@+id/sign_third_day_portrait_point"
+                    android:layout_width="@dimen/task_sign_item_point_width_height"
+                    android:layout_height="@dimen/task_sign_item_point_width_height"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/img_description"
+                    android:src="@drawable/unsigned_point_icon" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/text_sign_style"
+                android:layout_centerInParent="true"
+                android:text="第三天" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <com.parttime.view.MaskImage
+                android:id="@+id/sign_on_third_day_portrait_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:background="@drawable/signed_on_default"
+                android:contentDescription="@string/img_description"
+                maskimage:frame="@drawable/personal_center_head_frame"
+                maskimage:image="@drawable/signed_on_default"
+                maskimage:mask="@drawable/personal_center_head_mask_small" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <com.parttime.view.MaskImage
+                android:id="@+id/sign_off_third_day_portrait_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:background="@drawable/signed_on_default"
+                android:contentDescription="@string/img_description"
+                maskimage:frame="@drawable/personal_center_head_frame"
+                maskimage:image="@drawable/signed_off_default"
+                maskimage:mask="@drawable/personal_center_head_mask_small" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- 第四天 -->
+
+    <LinearLayout
+        android:id="@+id/sign_fourth_day_portrait_block"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/task_sign_item_height"
+        android:layout_below="@id/sign_third_day_portrait_block"
+        android:background="@color/white"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:layout_width="@dimen/task_sign_item_point_width_height"
+                android:layout_height="@dimen/task_sign_item_height"
+                android:layout_alignParentRight="true"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:visibility="visible" >
+
+                <View
+                    android:id="@+id/sign_fourth_day_portrait_line"
+                    android:layout_width="2dip"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="@dimen/task_sign_item_line_padding"
+                    android:background="@color/lightgray" />
+
+                <ImageView
+                    android:id="@+id/sign_fourth_day_portrait_point"
+                    android:layout_width="@dimen/task_sign_item_point_width_height"
+                    android:layout_height="@dimen/task_sign_item_point_width_height"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/img_description"
+                    android:src="@drawable/unsigned_point_icon" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/text_sign_style"
+                android:layout_centerInParent="true"
+                android:text="第四天" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <com.parttime.view.MaskImage
+                android:id="@+id/sign_on_fourth_day_portrait_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:background="@drawable/signed_on_default"
+                android:contentDescription="@string/img_description"
+                maskimage:frame="@drawable/personal_center_head_frame"
+                maskimage:image="@drawable/signed_on_default"
+                maskimage:mask="@drawable/personal_center_head_mask_small" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <com.parttime.view.MaskImage
+                android:id="@+id/sign_off_fourth_day_portrait_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:background="@drawable/signed_on_default"
+                android:contentDescription="@string/img_description"
+                maskimage:frame="@drawable/personal_center_head_frame"
+                maskimage:image="@drawable/signed_off_default"
+                maskimage:mask="@drawable/personal_center_head_mask_small" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- 第五天 -->
+
+    <LinearLayout
+        android:id="@+id/sign_fifth_day_portrait_block"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/task_sign_item_height"
+        android:layout_below="@id/sign_fourth_day_portrait_block"
+        android:background="@color/white"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:layout_width="@dimen/task_sign_item_point_width_height"
+                android:layout_height="@dimen/task_sign_item_height"
+                android:layout_alignParentRight="true"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:visibility="visible" >
+
+                <View
+                    android:id="@+id/sign_fifth_day_portrait_line"
+                    android:layout_width="2dip"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="@dimen/task_sign_item_line_padding"
+                    android:background="@color/lightgray" />
+
+                <ImageView
+                    android:id="@+id/sign_fifth_day_portrait_point"
+                    android:layout_width="@dimen/task_sign_item_point_width_height"
+                    android:layout_height="@dimen/task_sign_item_point_width_height"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/img_description"
+                    android:src="@drawable/unsigned_point_icon" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/text_sign_style"
+                android:layout_centerInParent="true"
+                android:text="第五天" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <com.parttime.view.MaskImage
+                android:id="@+id/sign_on_fifth_day_portrait_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:background="@drawable/signed_on_default"
+                android:contentDescription="@string/img_description"
+                maskimage:frame="@drawable/personal_center_head_frame"
+                maskimage:image="@drawable/signed_on_default"
+                maskimage:mask="@drawable/personal_center_head_mask_small" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <com.parttime.view.MaskImage
+                android:id="@+id/sign_off_fifth_day_portrait_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:background="@drawable/signed_on_default"
+                android:contentDescription="@string/img_description"
+                maskimage:frame="@drawable/personal_center_head_frame"
+                maskimage:image="@drawable/signed_off_default"
+                maskimage:mask="@drawable/personal_center_head_mask_small" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- 第六天 -->
+
+    <LinearLayout
+        android:id="@+id/sign_sixth_day_portrait_block"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/task_sign_item_height"
+        android:layout_below="@id/sign_fifth_day_portrait_block"
+        android:background="@color/white"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:layout_width="@dimen/task_sign_item_point_width_height"
+                android:layout_height="@dimen/task_sign_item_height"
+                android:layout_alignParentRight="true"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:visibility="visible" >
+
+                <View
+                    android:id="@+id/sign_sixth_day_portrait_line"
+                    android:layout_width="2dip"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="@dimen/task_sign_item_line_padding"
+                    android:background="@color/lightgray" />
+
+                <ImageView
+                    android:id="@+id/sign_sixth_day_portrait_point"
+                    android:layout_width="@dimen/task_sign_item_point_width_height"
+                    android:layout_height="@dimen/task_sign_item_point_width_height"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/img_description"
+                    android:src="@drawable/unsigned_point_icon" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/text_sign_style"
+                android:layout_centerInParent="true"
+                android:text="第六天" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <com.parttime.view.MaskImage
+                android:id="@+id/sign_on_sixth_day_portrait_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:background="@drawable/signed_on_default"
+                android:contentDescription="@string/img_description"
+                maskimage:frame="@drawable/personal_center_head_frame"
+                maskimage:image="@drawable/signed_on_default"
+                maskimage:mask="@drawable/personal_center_head_mask_small" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <com.parttime.view.MaskImage
+                android:id="@+id/sign_off_sixth_day_portrait_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:background="@drawable/signed_on_default"
+                android:contentDescription="@string/img_description"
+                maskimage:frame="@drawable/personal_center_head_frame"
+                maskimage:image="@drawable/signed_off_default"
+                maskimage:mask="@drawable/personal_center_head_mask_small" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- 第七天 -->
+
+    <LinearLayout
+        android:id="@+id/sign_seventh_day_portrait_block"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/task_sign_item_height"
+        android:layout_below="@id/sign_sixth_day_portrait_block"
+        android:background="@color/white"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:layout_width="@dimen/task_sign_item_point_width_height"
+                android:layout_height="@dimen/task_sign_item_height"
+                android:layout_alignParentRight="true"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:visibility="visible" >
+
+                <View
+                    android:id="@+id/sign_seventh_day_portrait_line"
+                    android:layout_width="2dip"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="@dimen/task_sign_item_line_padding"
+                    android:background="@color/lightgray" />
+
+                <ImageView
+                    android:id="@+id/sign_seventh_day_portrait_point"
+                    android:layout_width="@dimen/task_sign_item_point_width_height"
+                    android:layout_height="@dimen/task_sign_item_point_width_height"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/img_description"
+                    android:src="@drawable/unsigned_point_icon" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/text_sign_style"
+                android:layout_centerInParent="true"
+                android:text="第七天" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <com.parttime.view.MaskImage
+                android:id="@+id/sign_on_seventh_day_portrait_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:background="@drawable/signed_on_default"
+                android:contentDescription="@string/img_description"
+                maskimage:frame="@drawable/personal_center_head_frame"
+                maskimage:image="@drawable/signed_on_default"
+                maskimage:mask="@drawable/personal_center_head_mask_small" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <com.parttime.view.MaskImage
+                android:id="@+id/sign_off_seventh_day_portrait_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:background="@drawable/signed_on_default"
+                android:contentDescription="@string/img_description"
+                maskimage:frame="@drawable/personal_center_head_frame"
+                maskimage:image="@drawable/signed_off_default"
+                maskimage:mask="@drawable/personal_center_head_mask_small" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- 第八天 -->
+
+    <LinearLayout
+        android:id="@+id/sign_eigth_day_portrait_block"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/task_sign_item_height"
+        android:layout_below="@id/sign_seventh_day_portrait_block"
+        android:background="@color/white"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:layout_width="@dimen/task_sign_item_point_width_height"
+                android:layout_height="@dimen/task_sign_item_height"
+                android:layout_alignParentRight="true"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:visibility="visible" >
+
+                <View
+                    android:id="@+id/sign_eigth_day_portrait_line"
+                    android:layout_width="2dip"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="@dimen/task_sign_item_line_padding"
+                    android:background="@color/lightgray" />
+
+                <ImageView
+                    android:id="@+id/sign_eigth_day_portrait_point"
+                    android:layout_width="@dimen/task_sign_item_point_width_height"
+                    android:layout_height="@dimen/task_sign_item_point_width_height"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/img_description"
+                    android:src="@drawable/unsigned_point_icon" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/text_sign_style"
+                android:layout_centerInParent="true"
+                android:text="第八天" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <com.parttime.view.MaskImage
+                android:id="@+id/sign_on_eigth_day_portrait_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:background="@drawable/signed_on_default"
+                android:contentDescription="@string/img_description"
+                maskimage:frame="@drawable/personal_center_head_frame"
+                maskimage:image="@drawable/signed_on_default"
+                maskimage:mask="@drawable/personal_center_head_mask_small" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <com.parttime.view.MaskImage
+                android:id="@+id/sign_off_eigth_day_portrait_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:background="@drawable/signed_on_default"
+                android:contentDescription="@string/img_description"
+                maskimage:frame="@drawable/personal_center_head_frame"
+                maskimage:image="@drawable/signed_off_default"
+                maskimage:mask="@drawable/personal_center_head_mask_small" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- 第九天 -->
+
+    <LinearLayout
+        android:id="@+id/sign_ninth_day_portrait_block"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/task_sign_item_height"
+        android:layout_below="@id/sign_eigth_day_portrait_block"
+        android:background="@color/white"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:layout_width="@dimen/task_sign_item_point_width_height"
+                android:layout_height="@dimen/task_sign_item_height"
+                android:layout_alignParentRight="true"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:visibility="visible" >
+
+                <View
+                    android:id="@+id/sign_ninth_day_portrait_line"
+                    android:layout_width="2dip"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="@dimen/task_sign_item_line_padding"
+                    android:background="@color/lightgray" />
+
+                <ImageView
+                    android:id="@+id/sign_ninth_day_portrait_point"
+                    android:layout_width="@dimen/task_sign_item_point_width_height"
+                    android:layout_height="@dimen/task_sign_item_point_width_height"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/img_description"
+                    android:src="@drawable/unsigned_point_icon" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/text_sign_style"
+                android:layout_centerInParent="true"
+                android:text="第九天" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <com.parttime.view.MaskImage
+                android:id="@+id/sign_on_ninth_day_portrait_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:background="@drawable/signed_on_default"
+                android:contentDescription="@string/img_description"
+                maskimage:frame="@drawable/personal_center_head_frame"
+                maskimage:image="@drawable/signed_on_default"
+                maskimage:mask="@drawable/personal_center_head_mask_small" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="@dimen/task_sign_item_height"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <com.parttime.view.MaskImage
+                android:id="@+id/sign_off_ninth_day_portrait_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:background="@drawable/signed_on_default"
+                android:contentDescription="@string/img_description"
+                maskimage:frame="@drawable/personal_center_head_frame"
+                maskimage:image="@drawable/signed_off_default"
+                maskimage:mask="@drawable/personal_center_head_mask_small" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

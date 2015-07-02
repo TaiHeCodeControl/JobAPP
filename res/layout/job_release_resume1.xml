@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/job_all_resume_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/home_title" />
+
+    <Button
+        android:id="@+id/job_confirm"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/job_all_resume_selector"
+        android:text="@string/confirm"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/new_create_resume"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/job_confirm"
+        android:layout_margin="10dp"
+        android:background="@drawable/job_all_resume_selector"
+        android:text="@string/new_create_resume"
+        android:textColor="@color/white" />
+
+    <ListView
+        android:id="@+id/job_all_resume_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/new_create_resume"
+        android:layout_below="@id/job_all_resume_title" >
+    </ListView>
+
+</RelativeLayout>

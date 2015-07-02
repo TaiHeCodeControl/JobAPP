@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#aabbcc"
+    android:orientation="vertical"
+    android:paddingBottom="5dip" >
+
+    <RadioGroup
+        android:id="@+id/radiogroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" >
+
+        <RadioButton
+            android:id="@+id/radiobutton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableLeft="@drawable/pop_state_radio"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="5公里"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radiobutton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableLeft="@drawable/pop_state_radio"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="7公里"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radiobutton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableLeft="@drawable/pop_state_radio"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="10公里"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radiobutton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableLeft="@drawable/pop_state_radio"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="12公里"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radiobutton5"
+            android:button="@null"
+            android:drawableLeft="@drawable/pop_state_radio"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="16公里"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radiobutton6"
+            android:button="@null"
+            android:drawableLeft="@drawable/pop_state_radio"
+            android:drawablePadding="5dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:text="16公里以上"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" >
+        </RadioButton>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:layout_below="@id/radiogroup1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="5dip"
+        android:background="@color/main_btn_press"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+</RelativeLayout>

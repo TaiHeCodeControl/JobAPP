@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray" >
+
+    <include
+        android:id="@+id/forget_pwd_include"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        layout="@layout/login_title" />
+
+    <RelativeLayout
+        android:id="@+id/email_verify_relative"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/forget_pwd_include"
+        android:layout_margin="10dp"
+        android:background="@drawable/forget_bg_shape" >
+
+        <RelativeLayout
+            android:id="@+id/email_relative"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/register_bg" >
+
+            <TextView
+                android:id="@+id/obtain_verify_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/forget_pwd_verify_shape"
+                android:padding="10dp"
+                android:text="@string/obtain_verfiy"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/email_edittext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/obtain_verify_btn"
+                android:layout_toLeftOf="@id/obtain_verify_btn"
+                android:background="@android:color/transparent"
+                android:hint="@string/email_address_tip"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/confirm_obtain_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/obtain_edit"
+            android:layout_alignBottom="@+id/obtain_edit"
+            android:layout_alignRight="@+id/email_relative"
+            android:layout_margin="10dp"
+            android:background="@drawable/login_btn_bg_selector"
+            android:text="@string/confirm"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/obtain_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email_relative"
+            android:layout_margin="10dp"
+            android:layout_toLeftOf="@+id/confirm_obtain_btn"
+            android:background="@drawable/register_bg"
+            android:ems="10"
+            android:hint="@string/input_verify_tip"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/obtain_edit" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/modify_pwd_relative"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/email_verify_relative"
+        android:layout_margin="10dp"
+        android:background="@drawable/forget_bg_shape"
+        android:visibility="gone" >
+
+        <EditText
+            android:id="@+id/new_pwd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/register_bg"
+            android:hint="@string/new_pwd"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/new_pwd_again"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/new_pwd"
+            android:layout_margin="10dp"
+            android:background="@drawable/register_bg"
+            android:hint="@string/new_pwd_again"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/confirm_pwd_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/new_pwd_again"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/login_btn_bg_selector"
+            android:text="@string/confirm"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/confirm_pwd_btn" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/resume_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/home_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/resume_title"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" >
+
+            <TextView
+                android:id="@+id/desired_position"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/desired_position"
+                android:textSize="17sp" />
+
+            <com.parttime.view.MyImageSpinner
+                android:id="@+id/desired_spinner"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/desired_position"
+                android:background="@drawable/drop_down_box_bg" />
+
+            <View
+                android:id="@+id/desired_position_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@id/desired_position"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:id="@+id/desired_job_location"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@id/desired_position_line"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/desired_job_location"
+                android:textSize="17sp" />
+
+            <com.parttime.view.MyImageSpinner
+                android:id="@+id/province_spinner"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@id/desired_job_location"
+                android:layout_toRightOf="@id/desired_job_location"
+                android:background="@drawable/drop_down_box_bg"
+                android:spinnerMode="dropdown" />
+
+            <com.parttime.view.MyImageSpinner
+                android:id="@+id/city_spinner"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@id/desired_job_location"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/province_spinner"
+                android:background="@drawable/drop_down_box_bg"
+                android:spinnerMode="dropdown" />
+
+            <com.parttime.view.MyImageSpinner
+                android:id="@+id/area_spinner"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_alignLeft="@id/province_spinner"
+                android:layout_below="@id/province_spinner"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/drop_down_box_bg"
+                android:spinnerMode="dropdown" />
+
+            <EditText
+                android:id="@+id/location_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/area_spinner"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/desired_job_location"
+                android:background="@drawable/drop_down_box_bg"
+                android:ems="8"
+                android:hint="例如：北清路1号" />
+
+            <View
+                android:id="@+id/desired_job_location_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/location_text"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:id="@+id/parttime_text"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@id/desired_job_location_line"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/part_time"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/starttime_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/parttime_text"
+                android:layout_toRightOf="@+id/parttime_text"
+                android:background="@drawable/home_job_detail_link_bg"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/start_time1"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/endtime_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/parttime_text"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/starttime_btn"
+                android:background="@drawable/home_job_detail_link_bg"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/end_time1"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/starttime_btn"
+                android:layout_below="@id/starttime_btn"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/lightgray" />
+
+            <View
+                android:id="@+id/parttime_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@id/time_text"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:id="@+id/type_text"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignRight="@id/parttime_text"
+                android:layout_below="@id/parttime_line"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/type"
+                android:textSize="17sp" />
+
+            <RadioGroup
+                android:id="@+id/type_radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignRight="@id/desired_text"
+                android:layout_alignTop="@id/type_text"
+                android:layout_toRightOf="@+id/type_text"
+                android:gravity="left"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/type_hour"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableLeft="@drawable/state_radio"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/hour"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" >
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/type_day"
+                    android:layout_marginLeft="10dp"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/state_radio"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/day"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" >
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/type_weeks"
+                    android:layout_marginLeft="10dp"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/state_radio"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/week"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" >
+                </RadioButton>
+            </RadioGroup>
+
+            <View
+                android:id="@+id/type_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/type_text"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:id="@+id/name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignRight="@id/parttime_text"
+                android:layout_below="@id/type_line"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/job_resume_name"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/name_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignRight="@id/desired_text"
+                android:layout_alignTop="@id/name_text"
+                android:layout_toRightOf="@+id/name_text"
+                android:background="@drawable/drop_down_box_bg"
+                android:ems="8" />
+
+            <View
+                android:id="@+id/name_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/name_text"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:id="@+id/sex_text"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignRight="@id/parttime_text"
+                android:layout_below="@id/name_line"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/sex"
+                android:textSize="17sp" />
+
+            <RadioGroup
+                android:id="@+id/sex_radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/desired_text"
+                android:layout_alignTop="@id/sex_text"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/sex_text"
+                android:gravity="left"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/sex_male"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableLeft="@drawable/state_radio"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/male"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" >
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/sex_female"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/state_radio"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/female"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" >
+                </RadioButton>
+            </RadioGroup>
+
+            <View
+                android:id="@+id/sex_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/sex_text"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:id="@+id/height_text"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignRight="@id/parttime_text"
+                android:layout_below="@id/sex_line"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/job_resume_height"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/height_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignRight="@id/desired_text"
+                android:layout_alignTop="@id/height_text"
+                android:layout_toRightOf="@+id/height_text"
+                android:background="@drawable/drop_down_box_bg"
+                android:ems="8"
+                android:inputType="number" />
+
+            <View
+                android:id="@+id/height_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/height_text"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:id="@+id/phone_text"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignRight="@id/parttime_text"
+                android:layout_below="@id/height_line"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/job_resume_phone"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/phone_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignRight="@id/desired_text"
+                android:layout_alignTop="@id/phone_text"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/phone_text"
+                android:background="@drawable/drop_down_box_bg"
+                android:ems="8"
+                android:inputType="phone" />
+
+            <View
+                android:id="@+id/phone_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@id/phone_text"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:id="@+id/parttime_job_experience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phone_line"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/parttime_job_experience"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/editSms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/parttime_job_experience"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@id/parttime_job_experience"
+                android:background="@drawable/drop_down_box_bg"
+                android:ems="15"
+                android:gravity="left|top"
+                android:inputType="textMultiLine"
+                android:lines="4" />
+
+            <Button
+                android:id="@+id/confirm"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editSms"
+                android:layout_margin="10dp"
+                android:background="@drawable/job_all_resume_selector"
+                android:text="@string/confirm"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/confirm"
+                android:layout_marginTop="15dp" />
+
+            <include
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/home_hotwork"
+                layout="@layout/dlg_waiting_layout" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

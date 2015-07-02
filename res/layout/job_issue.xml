@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/job_issue_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/home_title" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/job_issue_title"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/job_title"
+                style="@style/system_2wrap"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/home_job_apply_margin_top"
+                android:padding="5dp"
+                android:text="@string/job_title1"
+                android:textSize="17sp" />
+
+       <!--      <EditText
+                android:id="@+id/job_title_text"
+                style="@style/system_2wrap"
+                android:layout_marginBottom="@dimen/home_job_apply_margin_top"
+                android:layout_marginLeft="@dimen/home_job_apply_margin_left"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="@dimen/home_job_apply_margin_top"
+                android:layout_toRightOf="@id/job_title"
+                android:background="@drawable/drop_down_box_bg"
+                android:ems="10"
+                android:gravity="left"
+                android:padding="5dp"
+                android:singleLine="true" /> -->
+            
+              <com.parttime.view.MyImageSpinner
+                android:id="@+id/desired_spinner"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="@dimen/home_job_apply_margin_left"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@+id/job_title"
+                android:background="@drawable/drop_down_box_bg"
+                 />
+
+            <View
+                android:id="@+id/job_title_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@id/desired_spinner"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:id="@+id/job_pay"
+                style="@style/system_2wrap"
+                android:layout_below="@id/job_title_line"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/home_job_apply_margin_top"
+                android:padding="5dp"
+                android:text="@string/job_pay"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/job_pay_text"
+                style="@style/system_2wrap"
+                android:layout_alignTop="@id/job_pay"
+                android:layout_below="@id/job_title"
+                android:layout_marginBottom="@dimen/home_job_apply_margin_top"
+                android:layout_marginLeft="@dimen/home_job_apply_margin_left"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@id/job_pay"
+                android:background="@drawable/drop_down_box_bg"
+                android:inputType="number"
+                android:ems="10"
+                android:gravity="left"
+                android:padding="5dp"
+                android:singleLine="true" />
+
+            <View
+                android:id="@+id/job_pay_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@id/job_pay_text"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:id="@+id/job_num"
+                style="@style/system_2wrap"
+                android:layout_below="@id/job_pay_line"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/home_job_apply_margin_top"
+                android:padding="5dp"
+                android:text="@string/job_num"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/job_num_text"
+                style="@style/system_2wrap"
+                android:layout_alignTop="@id/job_num"
+                android:layout_below="@id/job_pay_line"
+                android:layout_marginBottom="@dimen/home_job_apply_margin_top"
+                android:layout_marginLeft="@dimen/home_job_apply_margin_left"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@id/job_pay"
+                android:background="@drawable/drop_down_box_bg"
+                android:ems="10"
+                android:gravity="left"
+                android:inputType="number"
+                android:padding="5dp"
+                android:singleLine="true" />
+
+            <View
+                android:id="@+id/job_num_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@id/job_num_text"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:id="@+id/job_type"
+                style="@style/system_2wrap"
+                android:layout_below="@id/job_num_line"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/home_job_apply_margin_top"
+                android:padding="5dp"
+                android:text="@string/job_type1"
+                android:textSize="17sp" />
+
+            <RadioGroup
+                android:id="@+id/type_radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignTop="@id/job_type"
+                android:layout_below="@id/job_pay_line"
+                android:layout_marginLeft="@dimen/home_job_apply_margin_left"
+                android:layout_toRightOf="@+id/job_type"
+                android:gravity="left"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/type_hour"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableLeft="@drawable/state_radio"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/hour"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" >
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/type_day"
+                    android:layout_marginLeft="10dp"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/state_radio"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/day"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" >
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/type_weeks"
+                    android:layout_marginLeft="10dp"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/state_radio"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/week"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" >
+                </RadioButton>
+            </RadioGroup>
+
+            <View
+                android:id="@+id/type_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@id/job_type"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:id="@+id/job_start_time"
+                style="@style/system_2wrap"
+                android:layout_below="@id/type_line"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/home_job_apply_margin_top"
+                android:padding="5dp"
+                android:text="@string/part_time1"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/starttime_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/job_start_time"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/job_start_time"
+                android:background="@drawable/home_job_detail_link_bg"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="@string/start_time1"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/endtime_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/job_start_time"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/starttime_btn"
+                android:background="@drawable/home_job_detail_link_bg"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="@string/end_time1"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/starttime_btn"
+                android:layout_below="@id/starttime_btn"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/lightgray"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/parttime_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@id/time_text"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:id="@+id/job_address"
+                style="@style/system_2wrap"
+                android:layout_below="@id/parttime_line"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/home_job_apply_margin_top"
+                android:padding="5dp"
+                android:text="@string/job_address"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/job_address_text"
+                style="@style/system_2wrap"
+                android:layout_alignTop="@id/job_address"
+                android:layout_below="@id/parttime_line"
+                android:layout_marginBottom="@dimen/home_job_apply_margin_top"
+                android:layout_marginLeft="@dimen/home_job_apply_margin_left"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@id/job_address"
+                android:background="@drawable/drop_down_box_bg"
+                android:ems="10"
+                android:gravity="left"
+                android:ellipsize="end"
+                android:hint="eg:北京市昌平区史各庄"
+                android:padding="5dp"
+                android:singleLine="true" />
+
+            <View
+                android:id="@+id/job_address_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@id/job_address_text"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:id="@+id/job_required"
+                style="@style/system_2wrap"
+                android:layout_below="@id/job_address_line"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/home_job_apply_margin_top"
+                android:padding="5dp"
+                android:text="@string/job_required"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/job_required_text"
+                style="@style/system_2wrap"
+                android:layout_alignTop="@id/job_required"
+                android:layout_below="@id/job_address_line"
+                android:layout_marginBottom="@dimen/home_job_apply_margin_top"
+                android:layout_marginLeft="@dimen/home_job_apply_margin_left"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@id/job_required"
+                android:background="@drawable/drop_down_box_bg"
+                android:ems="10"
+                android:gravity="left"
+                android:lines="4"
+                android:padding="5dp" />
+
+            <View
+                android:id="@+id/job_required_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@id/job_required_text"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:id="@+id/apply_condition"
+                style="@style/system_2wrap"
+                android:layout_below="@id/job_required_line"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/home_job_apply_margin_top"
+                android:padding="5dp"
+                android:text="@string/apply_condition"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/apply_condition_text"
+                style="@style/system_2wrap"
+                android:layout_alignTop="@id/apply_condition"
+                android:layout_below="@id/job_required_line"
+                android:layout_marginBottom="@dimen/home_job_apply_margin_top"
+                android:layout_marginLeft="@dimen/home_job_apply_margin_left"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@id/apply_condition"
+                android:background="@drawable/drop_down_box_bg"
+                android:ems="10"
+                android:gravity="left"
+                android:lines="4"
+                android:padding="5dp" />
+
+            <View
+                android:id="@+id/apply_condition_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@id/apply_condition_text"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:background="@color/lightgray" />
+
+            <TextView
+                android:id="@+id/company_pic"
+                style="@style/system_2wrap"
+                android:layout_below="@id/apply_condition_line"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/home_job_apply_margin_top"
+                android:padding="5dp"
+                android:text="@string/company_pic"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/company_pic_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/company_pic"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/company_pic"
+                android:background="@drawable/home_job_detail_link_bg"
+                android:gravity="center"
+                android:padding="5dip"
+                android:text="@string/select_pic"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/company_pic_small"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_alignTop="@id/company_pic"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/company_pic"
+                android:background="@drawable/photo_frame_bg"
+                android:padding="5dip"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/change_pic"
+                style="@style/system_2wrap"
+                android:layout_alignBottom="@id/company_pic_small"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/company_pic_small"
+                android:text="@string/change_pic"
+                android:visibility="invisible" />
+
+            <View
+                android:id="@+id/company_pic_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@id/company_pic_small"
+                android:layout_margin="5dip"
+                android:layout_marginTop="@dimen/home_job_apply_margin_top"
+                android:background="@color/lightgray" />
+
+            <Button
+                android:id="@+id/apply_confirm_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/company_pic_line"
+                android:layout_margin="@dimen/home_job_apply_margin_top"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/job_all_resume_selector"
+                android:gravity="center"
+                android:text="@string/apply_confirm"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/apply_confirm_btn" />
+
+           
+        </RelativeLayout>
+    </ScrollView>
+ <include
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                layout="@layout/dlg_waiting_layout" />
+</RelativeLayout>

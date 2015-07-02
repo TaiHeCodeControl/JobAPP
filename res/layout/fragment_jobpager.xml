@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/job_relative"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/job_title_linear"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/job_title_relative"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/job_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="5dip"
+                    android:drawableRight="@drawable/down"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/job_title"
+                    android:textColor="@color/main_btn_press"
+                    android:textSize="20sp" />
+
+                <View
+                    android:id="@+id/job_title_view"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/job_title"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="5dp"
+                    android:background="@color/job_title_gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/job_commission_relative"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/job_commission"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/job_commission"
+                    android:textColor="@color/main_btn_press"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/job_commission"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="5dp"
+                    android:background="@color/job_title_gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/job_location_relative"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/job_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="5dip"
+                    android:drawableRight="@drawable/down"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/job_location"
+                    android:textColor="@color/main_btn_press"
+                    android:textSize="20sp" />
+
+                <View
+                    android:id="@+id/job_location_view"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/job_location"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="5dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/job_title_line"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/job_title_linear"
+            android:background="@color/job_title_line_gray" />
+
+        <com.parttime.pullrefresh.PullToRefreshLayout
+            android:id="@+id/job_refreshable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/job_title_line"
+            android:background="@color/background_gray" >
+
+            <include layout="@layout/refresh_head" />
+            <!-- 支持所有实现Pullable接口的View -->
+
+            <com.parttime.pullrefresh.PullableListView
+                android:id="@+id/job_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:divider="@color/lightgray"
+                android:dividerHeight="1dp" />
+
+            <include layout="@layout/load_more" />
+        </com.parttime.pullrefresh.PullToRefreshLayout>
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/job_title_line"
+            layout="@layout/dlg_waiting_layout" />
+    </RelativeLayout>
+
+</RelativeLayout>

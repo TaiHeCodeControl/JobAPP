@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/company_job_list_caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/home_title" />
+
+    <com.parttime.pullrefresh.PullToRefreshLayout
+        android:id="@+id/pjob_refreshable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/company_job_list_caption"
+        android:background="@color/background_gray" >
+
+        <include layout="@layout/refresh_head" />
+        <!-- 支持所有实现Pullable接口的View -->
+
+        <com.parttime.pullrefresh.PullableListView
+            android:id="@+id/pjob_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:divider="@color/background_gray"
+            android:dividerHeight="1dp"
+            android:listSelector="@color/listview_item_selector_color"
+            android:scrollbars="none" />
+
+        <include layout="@layout/load_more" />
+    </com.parttime.pullrefresh.PullToRefreshLayout>
+  <include
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        layout="@layout/dlg_waiting_layout" />
+</RelativeLayout>

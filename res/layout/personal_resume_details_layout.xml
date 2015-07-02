@@ -1,0 +1,988 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/personal_resume_details_caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/home_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/personal_resume_details_caption"
+        android:background="@color/white"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none"
+        android:requiresFadingEdge="none"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dip"
+                android:background="@color/background_gray" />
+            <!-- 期望职位 block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_expected_job_block"
+                android:layout_width="match_parent"
+                android:layout_height="50dip" >
+
+                <LinearLayout
+                    android:id="@+id/expected_job_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true" >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_expected_job_text_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.0" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="期望职位："
+                            android:textColor="@color/darkgray"
+                            android:textSize="17.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_expected_job_value_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/expected_job_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text=""
+                            android:textColor="@color/darkgray"
+                            android:textSize="17.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_expected_job_content_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2" >
+
+                        <TextView
+                            android:id="@+id/expected_job_content"
+                            android:layout_width="100dip"
+                            android:layout_height="30dip"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dip"
+                            android:background="@null"
+                            android:gravity="left|center_vertical"
+                            android:padding="2dip"
+                            android:text="饭店小时工"
+                            android:textSize="17sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:src="@drawable/personal_right_arrow" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/personalinfo_list_divider_color" />
+            </RelativeLayout>
+            <!-- 期望地点 block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_expected_position_block"
+                android:layout_width="match_parent"
+                android:layout_height="150dip" >
+
+                <LinearLayout
+                    android:id="@+id/expected_position_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dip"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_expected_position_text_block"
+                        android:layout_width="0dip"
+                        android:layout_height="50dip"
+                        android:layout_gravity="top"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="期望地点："
+                            android:textColor="@color/darkgray"
+                            android:textSize="17.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_expected_position_value_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/expected_position_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text=""
+                            android:textColor="@color/darkgray"
+                            android:textSize="17.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_expected_position_content_block"
+                        android:layout_width="0dip"
+                        android:layout_height="150dip"
+                        android:layout_weight="2" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_province_city_block"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dip"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"
+                            android:orientation="horizontal" >
+
+                            <com.parttime.view.MyImageSpinner
+                                android:id="@+id/expected_province_content"
+                                style="@style/main_myspinnerle"
+                                android:layout_width="0dip"
+                                android:layout_height="30dip"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1.0"
+                                android:background="@drawable/drop_down_box_bg"
+                                android:gravity="left|center_vertical"
+                                android:spinnerMode="dropdown" />
+
+                            <com.parttime.view.MyImageSpinner
+                                android:id="@+id/expected_city_content"
+                                style="@style/main_myspinnerle"
+                                android:layout_width="0dip"
+                                android:layout_height="30dip"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="5dip"
+                                android:layout_weight="1.0"
+                                android:background="@drawable/drop_down_box_bg"
+                                android:gravity="left|center_vertical"
+                                android:spinnerMode="dropdown" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/resume_tips"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dip"
+                            android:layout_below="@id/ll_province_city_block"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"
+                            android:orientation="horizontal" >
+
+                            <com.parttime.view.MyImageSpinner
+                                android:id="@+id/expected_district_content"
+                                style="@style/main_myspinnerle"
+                                android:layout_width="0dip"
+                                android:layout_height="30dip"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1.0"
+                                android:background="@drawable/drop_down_box_bg"
+                                android:gravity="left|center_vertical"
+                                android:spinnerMode="dropdown" />
+
+                            <com.parttime.view.MyImageSpinner
+                                style="@style/main_myspinnerle"
+                                android:layout_width="0dip"
+                                android:layout_height="30dip"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="5dip"
+                                android:layout_weight="1.0"
+                                android:background="@drawable/drop_down_box_bg"
+                                android:gravity="left|center_vertical"
+                                android:spinnerMode="dropdown"
+                                android:visibility="invisible" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dip"
+                            android:layout_below="@id/resume_tips"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"
+                            android:orientation="horizontal" >
+
+                            <EditText
+                                android:id="@+id/location_content_details_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/drop_down_box_bg"
+                                android:ems="8"
+                                android:hint="例如：北清路1号" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/personalinfo_list_divider_color" />
+            </RelativeLayout>
+            <!-- 兼职时间block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_parttime_block"
+                android:layout_width="match_parent"
+                android:layout_height="50dip" >
+
+                <LinearLayout
+                    android:id="@+id/parttime_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dip"
+                    android:layout_centerVertical="true" >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_parttime_text_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="兼职时间："
+                            android:textColor="@color/darkgray"
+                            android:textSize="17.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_parttime_value_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/parttime_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text=""
+                            android:textColor="@color/darkgray"
+                            android:textSize="17.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_parttime_content_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2" >
+
+                        <TextView
+                            android:id="@+id/start_parttime_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dip"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dip"
+                            android:background="@null"
+                            android:gravity="left|center_vertical"
+                            android:padding="2dip"
+                            android:text="13:00~14:00" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:src="@drawable/personal_right_arrow" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dip"
+                    android:layout_centerVertical="true" >
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0" >
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_endparttime_content_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2" >
+
+                        <TextView
+                            android:id="@+id/end_parttime_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dip"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dip"
+                            android:background="@null"
+                            android:gravity="left|center_vertical"
+                            android:padding="2dip"
+                            android:text="13:00~14:00" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:src="@drawable/personal_right_arrow" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/personalinfo_list_divider_color" />
+            <!-- 职位类别block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_job_type_block"
+                android:layout_width="match_parent"
+                android:layout_height="50dip" >
+
+                <LinearLayout
+                    android:id="@+id/job_type_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true" >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_job_type_text_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.0" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="兼职类别："
+                            android:textColor="@color/darkgray"
+                            android:textSize="17.0sp" />
+                    </RelativeLayout>
+
+                    <RadioGroup
+                        android:id="@+id/type_radiogroup"
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="2.0"
+                        android:gravity="left|center_vertical"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/type_hour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dip"
+                            android:checked="true"
+                            android:text="@string/hour"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:textStyle="normal" />
+
+                        <RadioButton
+                            android:id="@+id/type_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dip"
+                            android:text="@string/day"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:textStyle="normal" />
+
+                        <RadioButton
+                            android:id="@+id/type_weeks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dip"
+                            android:text="@string/week"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:textStyle="normal" />
+                    </RadioGroup>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dip"
+                android:background="@color/background_gray" />
+            <!-- 性别block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_gender_block"
+                android:layout_width="match_parent"
+                android:layout_height="50dip" >
+
+                <LinearLayout
+                    android:id="@+id/gender_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true" >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_gender_text_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.0" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="性别："
+                            android:textColor="@color/darkgray"
+                            android:textSize="17.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_gender_value_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/gender_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text=""
+                            android:textColor="@color/darkgray"
+                            android:textSize="17.0sp" />
+                    </RelativeLayout>
+
+                    	<RelativeLayout
+                    		android:id="@+id/rl_gender_content_block"
+                    		android:layout_width="0dip"
+                    		android:layout_height="wrap_content"
+                    		android:layout_weight="2">
+
+                    		<RadioGroup android:id="@+id/gender_group"
+                    			android:layout_width="match_parent"
+                    			android:layout_height="match_parent"
+                    			android:layout_centerVertical="true"
+                    			android:layout_marginLeft="10dip"
+                    			android:gravity="center_vertical"
+                    			android:orientation="horizontal"
+                    			android:splitMotionEvents="true">
+
+                    			<RadioButton
+                    				android:id="@+id/gender_maile"
+                    				android:layout_width="wrap_content"
+                    				android:layout_height="wrap_content"
+                    				android:layout_gravity="center_vertical"
+                    				android:checked="true" android:text="男"
+                    				android:textColor="@color/black"
+                    				android:textSize="17sp"
+                    				android:textStyle="normal" />
+
+                    			<RadioButton
+                    				android:id="@+id/gender_femaile"
+                    				android:layout_width="wrap_content"
+                    				android:layout_height="wrap_content"
+                    				android:layout_gravity="center_vertical"
+                    				android:layout_marginLeft="10dip"
+                    				android:checked="true" android:text="女"
+                    				android:textColor="@color/black"
+                    				android:textSize="17sp"
+                    				android:textStyle="normal" />
+                    		</RadioGroup>
+                    	</RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/personalinfo_list_divider_color" />
+            </RelativeLayout>
+
+            <!-- 姓名block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_name_block"
+                android:layout_width="match_parent"
+                android:layout_height="50dip" >
+
+                <LinearLayout
+                    android:id="@+id/name_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true" >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_name_text_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.0" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="姓名："
+                            android:textColor="@color/darkgray"
+                            android:textSize="17.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_name_value_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/name_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text=""
+                            android:textColor="@color/darkgray"
+                            android:textSize="17.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_name_content_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2" >
+
+                        <TextView
+                            android:id="@+id/name_content"
+                            style="@style/main_myspinnerle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dip"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dip"
+                            android:background="@null"
+                            android:gravity="left|center_vertical"
+                            android:padding="2dip"
+                            android:text="黄晓明" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:src="@drawable/personal_right_arrow" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/personalinfo_list_divider_color" />
+            </RelativeLayout>
+            <!-- 身高block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_body_height_block"
+                android:layout_width="match_parent"
+                android:layout_height="50dip" >
+
+                <LinearLayout
+                    android:id="@+id/body_height_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true" >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_body_height_text_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.0" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="身高："
+                            android:textColor="@color/darkgray"
+                            android:textSize="17.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_body_height_value_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/body_height_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text=""
+                            android:textColor="@color/darkgray"
+                            android:textSize="17.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_body_height_content_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2" >
+
+                        <TextView
+                            android:id="@+id/body_height_content"
+                            style="@style/main_myspinnerle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dip"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dip"
+                            android:background="@null"
+                            android:gravity="left|center_vertical"
+                            android:padding="2dip"
+                            android:text="130cm" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:src="@drawable/personal_right_arrow" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/personalinfo_list_divider_color" />
+            </RelativeLayout>
+            <!-- 手机号block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_tel_num_block"
+                android:layout_width="match_parent"
+                android:layout_height="50dip" >
+
+                <LinearLayout
+                    android:id="@+id/tel_num_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true" >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_tel_num_text_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.0" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="手机号："
+                            android:textColor="@color/darkgray"
+                            android:textSize="17.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_tel_num_value_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/tel_num_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text=""
+                            android:textColor="@color/darkgray"
+                            android:textSize="17.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_tel_num_content_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2" >
+
+                        <TextView
+                            android:id="@+id/tel_num_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dip"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dip"
+                            android:background="@null"
+                            android:gravity="left|center_vertical"
+                            android:padding="2dip"
+                            android:text="13831048110" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:src="@drawable/personal_right_arrow" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/personalinfo_list_divider_color" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dip"
+                android:background="@color/background_gray" />
+            <!-- 兼职经历block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_part_exp_block"
+                android:layout_width="match_parent"
+                android:layout_height="50dip" >
+
+                <LinearLayout
+                    android:id="@+id/part_exp_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true" >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_part_exp_text_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.0" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="兼职经历："
+                            android:textColor="@color/darkgray"
+                            android:textSize="17.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_part_exp_value_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/part_exp_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text=""
+                            android:textColor="@color/darkgray"
+                            android:textSize="17.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_part_exp_content_block"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2" >
+
+                        <TextView
+                            android:id="@+id/part_exp_content"
+                            style="@style/main_myspinnerle"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dip"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="20dip"
+                            android:background="@null"
+                            android:ellipsize="end"
+                            android:gravity="left|center_vertical"
+                            android:padding="2dip"
+                            android:singleLine="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:src="@drawable/personal_right_arrow" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/personalinfo_list_divider_color" />
+            </RelativeLayout>
+            <!-- 按钮block -->
+
+            <RelativeLayout
+                android:id="@+id/rl_btn_block"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:layout_marginTop="10dip" >
+
+                <LinearLayout
+                    android:id="@+id/btn_height_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true" >
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@color/light_blue"
+                        android:gravity="center"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/change_btn"
+                            style="@style/main_myspinnerle"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dip"
+                            android:gravity="center"
+                            android:text="修改简历"
+                            android:textColor="@color/white" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="1dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="1dip"
+                        android:layout_marginTop="1dip"
+                        android:background="@color/black"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/save_btn_height_content"
+                            style="@style/main_myspinnerle"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dip"
+                            android:background="@drawable/btn_selector"
+                            android:gravity="center"
+                            android:text="保存"
+                            android:textColor="@color/white" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/personal_resume_details_caption"
+        layout="@layout/dlg_waiting_layout" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/edit_dialog_layout" />
+
+</RelativeLayout>

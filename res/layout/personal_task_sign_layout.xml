@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/task_sign_block"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/task_sign_back"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+    <RelativeLayout
+        android:id="@+id/task_sign_content_block"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/task_sign_title"
+            style="@style/text_style_center_vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:gravity="bottom"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="16sp" />
+
+        <com.parttime.view.MyImageSpinner
+            android:id="@+id/task_sign_type"
+            style="@style/main_myspinnerle"
+            android:layout_width="100dip"
+            android:layout_height="30dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/drop_down_box_bg"
+            android:gravity="left|center_vertical"
+            android:spinnerMode="dropdown" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="2dip"
+            android:background="@color/lightgray" />
+    </RelativeLayout>
+
+    <!-- 签到内容 -->
+
+    <ScrollView
+        android:id="@+id/task_scroll_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/task_sign_content_block"
+        android:background="@null"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none"
+        android:requiresFadingEdge="none"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical" >
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/task_sign_portrait_image_content" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/finish_job_btn"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_below="@id/task_scroll_block"
+        android:layout_margin="20dip"
+        android:background="@drawable/btn_selector"
+        android:gravity="center"
+        android:text="工作完成"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="normal" />
+
+</RelativeLayout>

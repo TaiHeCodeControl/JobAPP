@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/white"
+    >
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <include 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/home_title"
+        android:id="@+id/job_all_resume_title"
+        />
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/job_all_resume_title"
+        >
+    <ListView 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/job_all_resume_listview"
+        ></ListView>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/new_create_resume"
+        android:text="@string/new_create_resume"
+        android:layout_below="@id/job_all_resume_listview"
+        android:background="@drawable/job_all_resume_selector"
+        android:textColor="@color/white"
+        />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/job_confirm"
+        android:layout_margin="10dp"
+        android:text="@string/confirm"
+        android:layout_below="@id/new_create_resume"
+        android:background="@drawable/job_all_resume_selector"
+        android:textColor="@color/white"
+        />
+    </RelativeLayout>
+
+</RelativeLayout>
+</ScrollView>

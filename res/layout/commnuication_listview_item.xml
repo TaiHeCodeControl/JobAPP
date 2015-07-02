@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <ImageView
+        android:id="@+id/communication_head_image"
+        style="@style/system_2wrap"
+        android:layout_margin="5dp"
+        android:background="@drawable/qq_icon" />
+
+    <RelativeLayout
+        style="@style/system_wrap_macth"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:id="@+id/right_relative"
+         >
+
+        <TextView
+            android:id="@+id/communication_time"
+            style="@style/system_2wrap"
+            android:text="12:50" />
+
+        <TextView
+            android:id="@+id/communication_info_count"
+            style="@style/system_2wrap"
+            android:layout_below="@id/communication_time"
+            android:background="@drawable/readnew_count_bg"
+            android:padding="5dp"
+            android:text="1" />
+    </RelativeLayout>
+    <RelativeLayout
+        style="@style/system_2macth"
+        android:layout_toRightOf="@id/communication_head_image"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/right_relative"
+         >
+
+        <TextView
+            android:id="@+id/communication_name"
+            style="@style/system_2wrap"
+            android:text="kskkk" />
+
+        <TextView
+            android:id="@+id/communication_info"
+            style="@style/system_2wrap"
+            android:layout_below="@id/communication_name"
+            android:text="xinxi" />
+    </RelativeLayout>
+
+</RelativeLayout>

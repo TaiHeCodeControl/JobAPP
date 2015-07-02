@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/comment_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="刘**（135*****306）"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/comment_info"
+        android:ems="13"
+        android:padding="10dp"
+        android:id="@+id/comment_content"
+        android:text="工作环境很好，工资及时发放" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:padding="5dp"
+        android:id="@+id/comment_text"
+        android:text="好评" />
+
+    <ProgressBar
+        android:id="@+id/comment_rating"
+        android:layout_width="75dp"
+        android:layout_height="12dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="2dp"
+        android:indeterminateOnly="false"
+        android:max="5"
+        android:layout_below="@id/comment_text"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:progressDrawable="@drawable/credit_progress" />
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/comment_time"
+        android:text="2015-2-15"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/comment_content"
+        android:padding="10dp"
+        />
+
+</RelativeLayout>

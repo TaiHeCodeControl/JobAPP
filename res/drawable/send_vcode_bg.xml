@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 四个角的圆角半径，左边右边中间的区别就是在这里体现的 -->
+    <corners
+        android:bottomLeftRadius="3dp"
+        android:bottomRightRadius="3dp"
+        android:topLeftRadius="3dp"
+        android:topRightRadius="3dp" />
+    <!-- 填充颜色，选中和未选中的区别就在这里还有文字颜色 -->
+    <solid android:color="#f02e3d" />
+
+    <padding
+        android:bottom="7dp"
+        android:left="3dp"
+        android:right="3dp"
+        android:top="7dp" />
+
+</shape>
