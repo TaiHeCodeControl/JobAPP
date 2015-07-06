@@ -30,7 +30,6 @@
             android:orientation="vertical" >
 
             <!-- 头像部分block -->
-
             <RelativeLayout
                 android:id="@+id/rl_personal_headimage_block"
                 android:layout_width="match_parent"
