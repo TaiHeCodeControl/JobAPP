@@ -39,6 +39,7 @@ import com.easemob.chat.EMChatManager;
 import com.easemob.exceptions.EaseMobException;
 import com.parttime.application.PartTimeApplication;
 import com.parttime.constant.Constant;
+import com.parttime.fragment.MainFragment;
 import com.parttime.msg.ErrorMsgSvr;
 import com.parttime.parttimejob.R;
 import com.parttime.svr.SvrInfo;
@@ -146,7 +147,7 @@ public class Register_User extends Activity {
 		register_head_image.setOnClickListener(new MyClickListener(SET_HEAD_IMAGE_INT));
 		register_btn.setOnClickListener(new MyClickListener(REGISTER_INT));
 		send_vcode.setOnClickListener(new MyClickListener(SEND_VCODE_INT));
-//		agree_text.setOnClickListener(new MyClickListener(AGREE_INT));
+		agree_text.setOnClickListener(new MyClickListener(AGREE_INT));//用户协议点击事件
 		mtitle_back_arrow.setOnClickListener(new MyClickListener(BACK_INT));
 
 		register_radiogroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {
@@ -205,9 +206,10 @@ public class Register_User extends Activity {
 						register_map.put("call", account_edit.getText().toString());
 						if (!registerHeadPath.equals(""))
 							register_map.put("avatar", registerHeadPath);
-						if (registerHeadPath == null || registerHeadPath.equals("")) {
-							Utils.ShowToast(mContext, "头像还没有上传");
-						} else if (agree_check.isChecked()) {
+//						if (registerHeadPath == null || registerHeadPath.equals("")) {
+//							Utils.ShowToast(mContext, "头像还没有上传");
+//						} else 
+						if (agree_check.isChecked()) {
 							if (vcode_edit.getText().toString().equals(Utils.Vcode)) {
 								if (Submit.isNetworkAvailable(mContext)) {
 									String st5 = getResources().getString(R.string.Is_the_registered);
@@ -301,8 +303,11 @@ public class Register_User extends Activity {
 			}
 			if (!Register_User.this.isFinishing())
 				pd.dismiss();
+//			Intent intent = new Intent();
+//			intent.setClass(Register_User.this, MainFragment.class);
+//			startActivity(intent);
 			Register_User.this.finish();
-			// Utils.ShowToast(mContext, "注册成功");
+			//Utils.ShowToast(mContext, "注册成功");
 
 			return;
 		}
