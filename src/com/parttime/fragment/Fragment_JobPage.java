@@ -205,28 +205,53 @@ public class Fragment_JobPage extends Fragment {
 				if (checkedId == radio1.getId()) {
 					kilometre = 5000;
 					select_flag = "";
+					chooseLocation();
 				} else if (checkedId == radio2.getId()) {
 					kilometre = 7000;
 					select_flag = "";
+					chooseLocation();
 				} else if (checkedId == radio3.getId()) {
 					kilometre = 10000;
 					select_flag = "";
+					chooseLocation();
 				} else if (checkedId == radio4.getId()) {
 					kilometre = 12000;
 					select_flag = "";
+					chooseLocation();
 				} else if (checkedId == radio5.getId()) {
 					kilometre = 16000;
 					select_flag = "";
+					chooseLocation();
 				} else if (checkedId == radio6.getId()) {
 					kilometre = 16000;
 					select_flag = "rest";
+					chooseLocation();
 				}
 
 			}
 		});
-		confirm_btn.setOnClickListener(new MyClickListener(CONFIRM_CLICK_INT));
+		//confirm_btn.setOnClickListener(new MyClickListener(CONFIRM_CLICK_INT));
+		
 	}
+	private void chooseLocation(){
+		ArrayList<HashMap<String, Object>> filter_list = parttimeDb.filterJobInfo(mContext, kilometre, select_flag);
 
+		if (filter_list != null && filter_list.size() > 0) {
+			if (job_listview_adapter != null) {
+				job_listview_adapter.refresh(filter_list);
+			} else {
+				job_listview_adapter = new Job_ListView_Adapter1(getActivity(), filter_list, "job");
+				job_list.setAdapter(job_listview_adapter);
+			}
+		} else if (filter_list.size() == 0) {
+			CleanDownloadTips(mContext, "所查找位置的求职信息不存在，请重新查找");
+		}
+
+		if (popupWindow != null && popupWindow.isShowing()) {
+			popupWindow.dismiss();
+
+		}
+	}
 	private void initpopup_position(View v) {
 		searchbox = (ClearEditText) v.findViewById(R.id.search_edit);
 		search_btn = (Button) v.findViewById(R.id.search_btn);
@@ -253,7 +278,7 @@ public class Fragment_JobPage extends Fragment {
 		});
 
 		search_btn.setOnClickListener(new MyClickListener(SEARCH_CLICK_INT));
-		confirm_btn_position.setOnClickListener(new MyClickListener(CONFIRM_TIME_CLICK_INT));
+		//confirm_btn_position.setOnClickListener(new MyClickListener(CONFIRM_TIME_CLICK_INT));
 
 	}
 
@@ -276,25 +301,25 @@ public class Fragment_JobPage extends Fragment {
 				// Utils.ShowToast(mContext, "popupwindow");
 				popupWindow.showAsDropDown(v);
 				break;
-			case CONFIRM_CLICK_INT:
-				ArrayList<HashMap<String, Object>> filter_list = parttimeDb.filterJobInfo(mContext, kilometre, select_flag);
-
-				if (filter_list != null && filter_list.size() > 0) {
-					if (job_listview_adapter != null) {
-						job_listview_adapter.refresh(filter_list);
-					} else {
-						job_listview_adapter = new Job_ListView_Adapter1(getActivity(), filter_list, "job");
-						job_list.setAdapter(job_listview_adapter);
-					}
-				} else if (filter_list.size() == 0) {
-					CleanDownloadTips(mContext, "所查找位置的求职信息不存在，请重新查找");
-				}
-
-				if (popupWindow != null && popupWindow.isShowing()) {
-					popupWindow.dismiss();
-
-				}
-				break;
+		//	case CONFIRM_CLICK_INT:
+//				ArrayList<HashMap<String, Object>> filter_list = parttimeDb.filterJobInfo(mContext, kilometre, select_flag);
+//
+//				if (filter_list != null && filter_list.size() > 0) {
+//					if (job_listview_adapter != null) {
+//						job_listview_adapter.refresh(filter_list);
+//					} else {
+//						job_listview_adapter = new Job_ListView_Adapter1(getActivity(), filter_list, "job");
+//						job_list.setAdapter(job_listview_adapter);
+//					}
+//				} else if (filter_list.size() == 0) {
+//					CleanDownloadTips(mContext, "所查找位置的求职信息不存在，请重新查找");
+//				}
+//
+//				if (popupWindow != null && popupWindow.isShowing()) {
+//					popupWindow.dismiss();
+//
+//				}
+				//break;
 			case SEARCH_CLICK_INT:
 				ArrayList<HashMap<String, Object>> filter_list_position = parttimeDb.filterJobInfobyposition(mContext, searchbox.getText().toString());
 

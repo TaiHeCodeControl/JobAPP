@@ -303,11 +303,11 @@ public class Register_User extends Activity {
 			}
 			if (!Register_User.this.isFinishing())
 				pd.dismiss();
-			Intent intent = new Intent();
-			intent.setClass(Register_User.this, MainFragment.class);
-			startActivity(intent);
+//			Intent intent = new Intent();
+//			intent.setClass(Register_User.this, MainFragment.class);
+//			startActivity(intent);
 			Register_User.this.finish();
-			Utils.ShowToast(mContext, "注册成功");
+			//Utils.ShowToast(mContext, "注册成功");
 
 			return;
 		}
