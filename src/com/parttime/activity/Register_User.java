@@ -372,7 +372,7 @@ public class Register_User extends Activity {
 		protected Boolean doInBackground(HashMap<String, String>... params) {
 			int iresult = SvrOperation.SendVcode(mContext, params[0]);
 			errcode = iresult;
-			if (iresult == 200) {
+			if (iresult == 0) {
 				return true;
 			} else {
 				return false;
@@ -412,7 +412,7 @@ public class Register_User extends Activity {
 		new Thread() {
 			@Override
 			public void run() {
-				int numsize = 120;
+				int numsize = 60;
 
 				while (second_flag) {
 					try {
@@ -435,16 +435,8 @@ public class Register_User extends Activity {
 	}
 
 	/**
-	 * ========================================================================
-	 * ==================================================
-	 */
-	/**
 	 * ======================================= 通过forrsult获取命令，选取本机图片
 	 * ==========================================================
-	 */
-	/**
-	 * ========================================================================
-	 * ==================================================
 	 */
 	private MediaProcess myMedia = null;
 	DialogInterface.OnClickListener ImageSelDlgHandle = new DialogInterface.OnClickListener() {
@@ -546,18 +538,5 @@ public class Register_User extends Activity {
 			break;
 		}
 	}
-
-	/**
-	 * ========================================================================
-	 * ==================================================
-	 */
-	/**
-	 * ========================================================================
-	 * ==================================================
-	 */
-	/**
-	 * ========================================================================
-	 * ==================================================
-	 */
 
 }
