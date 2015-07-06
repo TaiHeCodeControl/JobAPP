@@ -46,8 +46,8 @@
     <string name="register_pwd_tip">6-18位数字或字母</string>
     <string name="personal_user">个人用户</string>
     <string name="company_user">企业用户</string>
-    <string name="want_ask_job">我要工作</string>
-    <string name="want_ask_worker">我要找人</string>
+    <string name="want_ask_job">我是学生</string>
+    <string name="want_ask_worker">我是HR</string>
     <string name="clause">我已阅读并同意</string>
     <string name="clause1">蛋壳儿用户协议</string>
     <string name="recommended_code">推荐码</string>
