@@ -144,10 +144,10 @@ public class Personal_Details_Activity extends Activity {
 		WorkExpBlock = (RelativeLayout)findViewById(R.id.rl_personal_workexp_block);
 		QQBlock = (RelativeLayout)findViewById(R.id.rl_personal_qq_block);
 		CallBlock = (RelativeLayout)findViewById(R.id.rl_personal_call_block);
-		CardConfirmBlock= (RelativeLayout)findViewById(R.id.rl_personal_cardconfirm_block);
+//		CardConfirmBlock= (RelativeLayout)findViewById(R.id.rl_personal_cardconfirm_block);
 		
 		HeadImage = (ImageView)findViewById(R.id.personal_headimage);
-		CardConfirmImage = (ImageView)findViewById(R.id.personal_info_cardconfirm);
+//		CardConfirmImage = (ImageView)findViewById(R.id.personal_info_cardconfirm);
 
 		InfoName = (TextView)findViewById(R.id.personal_info_name);
 		InfoGender = (TextView)findViewById(R.id.personal_info_gender);
@@ -165,7 +165,7 @@ public class Personal_Details_Activity extends Activity {
 		WorkExpBlock.setOnClickListener(new MyOnClickListener(CLICK_TYPE_WORKEXP));
 		QQBlock.setOnClickListener(new MyOnClickListener(CLICK_TYPE_QQ));
 		CallBlock.setOnClickListener(new MyOnClickListener(CLICK_TYPE_CALL));
-		CardConfirmBlock.setOnClickListener(new MyOnClickListener(CLICK_TYPE_CARDCONFIRM));
+//		CardConfirmBlock.setOnClickListener(new MyOnClickListener(CLICK_TYPE_CARDCONFIRM));
 		
 		
 		EditDialogBlock = (RelativeLayout) findViewById(R.id.edit_dialog_layout);
@@ -233,7 +233,7 @@ public class Personal_Details_Activity extends Activity {
 	        		HeadImage.setImageDrawable(getResources().getDrawable(R.drawable.default_avatar_girl));
 	        }
 	        
-	        mImageLoader.displayImage(struct.mPersonalCardConfirm, CardConfirmImage, options);
+//	        mImageLoader.displayImage(struct.mPersonalCardConfirm, CardConfirmImage, options);
 	}
 	/**
 	 * 自定义ClickListener管理Click事件
@@ -427,11 +427,11 @@ public class Personal_Details_Activity extends Activity {
 				if (errcode !=SvrInfo.SVR_RESULT_SUCCESS)
 					return false;
 				}
-				if(ModifyCardConfirmState){
+				/*if(ModifyCardConfirmState){
 					errcode = SvrOperation.uploadConfirmImage(mContext, userid,"个人", params[0].mPersonalCardConfirm);
 					if (errcode !=SvrInfo.SVR_RESULT_SUCCESS)
 						return false;
-				}
+				}*/
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

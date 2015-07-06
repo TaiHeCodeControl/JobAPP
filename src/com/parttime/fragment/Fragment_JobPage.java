@@ -3,6 +3,7 @@ package com.parttime.fragment;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.graphics.drawable.BitmapDrawable;
@@ -77,6 +78,7 @@ public class Fragment_JobPage extends Fragment {
 	private RelativeLayout job_location_relative;
 	private TextView job_title;
 	private TextView job_location;
+	private Activity mActivity;
 
 	private PopupWindow popupWindow;
 	private PopupWindow popupWindow_position;
@@ -119,7 +121,7 @@ public class Fragment_JobPage extends Fragment {
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
+		mActivity = getActivity();
 		View view = inflater.inflate(R.layout.fragment_jobpager, container, false);
 
 		initView(view);
@@ -283,7 +285,7 @@ public class Fragment_JobPage extends Fragment {
 					if (job_listview_adapter != null) {
 						job_listview_adapter.refresh(filter_list);
 					} else {
-						job_listview_adapter = new Job_ListView_Adapter1(getActivity(), filter_list, "job");
+						job_listview_adapter = new Job_ListView_Adapter1(mActivity, filter_list, "job");
 						job_list.setAdapter(job_listview_adapter);
 					}
 				} else if (filter_list.size() == 0) {
@@ -302,7 +304,7 @@ public class Fragment_JobPage extends Fragment {
 					if (job_listview_adapter != null) {
 						job_listview_adapter.refresh(filter_list_position);
 					} else {
-						job_listview_adapter = new Job_ListView_Adapter1(getActivity(), filter_list_position, "job");
+						job_listview_adapter = new Job_ListView_Adapter1(mActivity, filter_list_position, "job");
 						job_list.setAdapter(job_listview_adapter);
 					}
 				} else if (filter_list_position.size() == 0) {
@@ -321,7 +323,7 @@ public class Fragment_JobPage extends Fragment {
 					if (job_listview_adapter != null) {
 						job_listview_adapter.refresh(filter_list_time);
 					} else {
-						job_listview_adapter = new Job_ListView_Adapter1(getActivity(), filter_list_time, "job");
+						job_listview_adapter = new Job_ListView_Adapter1(mActivity, filter_list_time, "job");
 						job_list.setAdapter(job_listview_adapter);
 					}
 				} else if (filter_list_time.size() == 0) {
@@ -381,7 +383,7 @@ public class Fragment_JobPage extends Fragment {
 					}
 				}
 				part_list = parttimeDb.getJobInfo1(mContext);
-				job_listview_adapter = new Job_ListView_Adapter1(getActivity(), part_list, "job");
+				job_listview_adapter = new Job_ListView_Adapter1(mActivity, part_list, "job");
 				job_list.setAdapter(job_listview_adapter);
 
 				break;

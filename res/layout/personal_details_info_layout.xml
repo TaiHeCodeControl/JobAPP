@@ -431,7 +431,8 @@
                 android:id="@+id/rl_personal_cardconfirm_block"
                 android:layout_width="match_parent"
                 android:layout_height="60dip"
-                android:background="@color/white" >
+                android:background="@color/white"
+                android:visibility="gone" >
 
                 <TextView
                     android:id="@+id/cardconfirm_tips"

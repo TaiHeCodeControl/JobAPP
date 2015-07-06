@@ -73,7 +73,7 @@ public class Submit {
 			HttpResponse httpResponse = new DefaultHttpClient(httpParams).execute(request);
 			if (httpResponse.getStatusLine().getStatusCode() == 200) {
 				String retSrc = EntityUtils.toString(httpResponse.getEntity(), "UTF_8");
-
+				Log.v("修改：", retSrc);
 				JSONObject result = new JSONObject(retSrc);
 				return result;
 			} else {

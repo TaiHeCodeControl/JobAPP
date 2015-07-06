@@ -305,6 +305,7 @@ public class LoginActivity extends Activity {
 							}
 						});
 						// pd.setMessage(getString(R.string.Is_landing));
+						Log.v("登录", "logining");
 						pd.setMessage("正在登录...");
 						pd.show();
 
@@ -357,6 +358,7 @@ public class LoginActivity extends Activity {
 		protected Boolean doInBackground(HashMap<String, String>... params) {
 
 			int iresult = SvrOperation.Login(context, params[0]);
+			Log.v("登录", "0登录"+iresult);
 			if (iresult != SvrInfo.SVR_RESULT_SUCCESS) {
 				errcode = iresult;
 				return false;
@@ -371,6 +373,7 @@ public class LoginActivity extends Activity {
 
 			if (result == false) {
 				int errmsg = ErrorMsgSvr.ErrorMsg(errcode);
+				pd.dismiss();
 				Utils.ShowToast(context, errmsg);
 				return;
 			}
@@ -410,7 +413,6 @@ public class LoginActivity extends Activity {
 
 			@Override
 			public void onSuccess() {
-
 				if (!progressShow) {
 					return;
 				}
@@ -420,7 +422,7 @@ public class LoginActivity extends Activity {
 				// 更新ui
 				runOnUiThread(new Runnable() {
 					public void run() {
-						pd.setMessage("正在获取好友列表...");
+//						pd.setMessage("正在获取好友列表...");
 						// Toast.makeText(getApplicationContext(),
 						// "正在登录...", 200).show();
 					}
