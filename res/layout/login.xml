@@ -147,7 +147,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
-                android:text="浏览模式" />
+                android:text="" />
 
             <LinearLayout
                 android:layout_width="match_parent"

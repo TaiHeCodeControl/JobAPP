@@ -147,7 +147,7 @@ public class Register_User extends Activity {
 		register_head_image.setOnClickListener(new MyClickListener(SET_HEAD_IMAGE_INT));
 		register_btn.setOnClickListener(new MyClickListener(REGISTER_INT));
 		send_vcode.setOnClickListener(new MyClickListener(SEND_VCODE_INT));
-		agree_text.setOnClickListener(new MyClickListener(AGREE_INT));
+		agree_text.setOnClickListener(new MyClickListener(AGREE_INT));//用户协议点击事件
 		mtitle_back_arrow.setOnClickListener(new MyClickListener(BACK_INT));
 
 		register_radiogroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {
