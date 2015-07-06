@@ -130,7 +130,6 @@ public class StartActivity extends Activity {
 					} else {
 						username = sharedPreferences.getString("login_username", "");
 						pwd = sharedPreferences.getString("login_pwd", "");
-						Log.e("hu", "pwd   " + pwd);
 						map.put("username", username);
 						map.put("pwd", MD5Encrypt.encryption(pwd));
 						// // new LoginTask().execute(map);
@@ -186,7 +185,6 @@ public class StartActivity extends Activity {
 						pwd = sharedPreferences.getString("login_pwd", "");
 						map.put("username", username);
 						map.put("pwd", MD5Encrypt.encryption(pwd));
-
 					} catch (InterruptedException e) {
 					}
 					if (Submit.isNetworkAvailable(mContext)) {
@@ -201,11 +199,10 @@ public class StartActivity extends Activity {
 										progressShow = false;
 									}
 								});
-								// pd.setMessage(getString(R.string.Is_landing));
 								pd.setMessage("正在登录...");
 								pd.show();
 //								LoginHx(username, pwd);
-								// new LoginTask().execute(map);
+								 new LoginTask().execute(map);
 							}
 						});
 					} else {
