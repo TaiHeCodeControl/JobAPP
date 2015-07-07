@@ -6,28 +6,6 @@
     android:paddingBottom="5dip"
     android:paddingRight="5dip" >
 
-    <com.parttime.view.ClearEditText
-        android:id="@+id/search_edit"
-        android:layout_width="150dip"
-        android:layout_height="35dip"
-        android:layout_margin="5dp"
-        android:background="@drawable/search_bg"
-        android:ellipsize="end"
-        android:hint="@string/search"
-        android:singleLine="true"
-        android:textSize="12sp" />
-
-    <Button
-        android:id="@+id/search_btn"
-        android:layout_width="50dp"
-        android:layout_height="35dip"
-        android:layout_margin="5dp"
-        android:layout_toRightOf="@+id/search_edit"
-        android:background="@color/main_btn_press"
-        android:text="搜索"
-        android:textColor="@color/white"
-        android:textSize="14sp" />
-
     <TextView
         android:id="@+id/issue_time_text"
         android:layout_width="wrap_content"
