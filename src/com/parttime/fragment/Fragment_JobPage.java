@@ -150,6 +150,10 @@ public class Fragment_JobPage extends Fragment {
 		refreshableView = (PullToRefreshLayout) v.findViewById(R.id.job_refreshable);
 		input_map = new HashMap<String, String>();
 		input_map.put("count", "0");
+		
+		searchbox = (ClearEditText) v.findViewById(R.id.search_edit);
+		search_btn = (Button) v.findViewById(R.id.search_btn);
+		search_btn.setOnClickListener(new MyClickListener(SEARCH_CLICK_INT));
 
 		/* 等待对话框部分 */
 		WaitingText = (TextView) v.findViewById(R.id.Waiting_text);
@@ -255,8 +259,7 @@ public class Fragment_JobPage extends Fragment {
 		}
 	}
 	private void initpopup_position(View v) {
-		searchbox = (ClearEditText) v.findViewById(R.id.search_edit);
-		search_btn = (Button) v.findViewById(R.id.search_btn);
+		
 		confirm_btn_position = (Button) v.findViewById(R.id.confirm_btn);
 
 		radiogroup_position = (RadioGroup) v.findViewById(R.id.radiogroup_time);
@@ -279,8 +282,7 @@ public class Fragment_JobPage extends Fragment {
 			}
 		});
 
-		search_btn.setOnClickListener(new MyClickListener(SEARCH_CLICK_INT));
-		//confirm_btn_position.setOnClickListener(new MyClickListener(CONFIRM_TIME_CLICK_INT));
+		confirm_btn_position.setOnClickListener(new MyClickListener(CONFIRM_TIME_CLICK_INT));
 
 	}
 

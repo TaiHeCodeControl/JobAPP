@@ -6,12 +6,50 @@
     <RelativeLayout
         android:id="@+id/job_relative"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
+        android:layout_height="fill_parent">
+        
+        <LinearLayout
+            android:id="@+id/id_searchde"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            <com.parttime.view.ClearEditText
+		       android:id="@+id/search_edit"
+		       android:layout_width="0dip"
+		       android:layout_height="35dip"
+		       android:layout_weight="2.5"
+		       android:layout_margin="5dp"
+		       android:background="@drawable/search_bg"
+		       android:ellipsize="end"
+		       android:hint="@string/search"
+		       android:singleLine="true"
+		       android:textSize="12sp" />
 
+		    <Button
+		        android:id="@+id/search_btn"
+		        android:layout_width="0dp"
+		        android:layout_height="35dip"
+		        android:layout_weight="1"
+		        android:layout_margin="5dp"
+		        android:layout_toRightOf="@+id/search_edit"
+		        android:background="@color/main_btn_press"
+		        android:text="搜索"
+		        android:textColor="@color/white"
+		        android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/job_title_linel"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/id_searchde"
+            android:background="@color/job_title_line_gray" />
+        
         <LinearLayout
             android:id="@+id/job_title_linear"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/id_searchde"
             android:orientation="horizontal" >
 
             <RelativeLayout
