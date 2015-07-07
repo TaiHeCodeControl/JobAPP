@@ -85,7 +85,7 @@
         </RadioButton>
     </RadioGroup>
 
-    <Button
+    <!-- <Button
         android:id="@+id/confirm"
         android:layout_width="match_parent"
         android:layout_height="30dip"
@@ -97,6 +97,6 @@
         android:background="@color/main_btn_press"
         android:text="确定"
         android:textColor="@color/white"
-        android:textSize="17sp" />
+        android:textSize="17sp" /> -->
 
 </RelativeLayout>

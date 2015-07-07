@@ -44,12 +44,22 @@
                     android:isIndicator="false"
                     android:numStars="5"
                     android:stepSize="1" />
-
+            </RelativeLayout>
+			
+			<RelativeLayout 
+			     android:id="@+id/comment2_relative"
+            	 android:layout_width="fill_parent"
+            	 android:layout_height="wrap_content"
+            	 android:layout_below="@id/edit_relative"
+            	 android:background="@drawable/comment_edit_bg"
+            	 android:layout_marginTop="10dp"
+            	 android:layout_margin="10dp"
+			    >
                 <EditText
                     android:id="@+id/comment_edit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/app_ratingbar"
+                   
                     android:background="@null"
                     android:gravity="left|top"
                     android:hint="@string/input_comment"
@@ -70,7 +80,7 @@
                 android:id="@+id/publish_comment"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/edit_relative"
+                android:layout_below="@id/comment2_relative"
                 android:layout_margin="10dp"
                 android:background="@drawable/home_job_detail_link_bg"
                 android:gravity="center"
