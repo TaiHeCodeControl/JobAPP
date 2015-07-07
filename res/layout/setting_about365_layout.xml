@@ -102,6 +102,10 @@
                 android:padding="5dip"
                 android:scaleType="fitXY"
                 android:src="@drawable/qrcode" />
+            
+            <View 
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
         </LinearLayout>
     </ScrollView>
 

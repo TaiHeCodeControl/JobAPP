@@ -53,7 +53,8 @@ public class Setting_About365_Activity extends Activity {
 		EulaTextView.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);// 下划线
 		VersionNumber = (TextView) findViewById(R.id.about_version_number);
 		String versionname = Utils.getVersionName(mContext);
-		VersionNumber.setText(String.format(getResources().getString(R.string.text_show_version_name), versionname));
+		//显示蛋壳儿版本信息，位置重复，还未确定位置
+//		VersionNumber.setText(String.format(getResources().getString(R.string.text_show_version_name), versionname));
 
 		// EulaTextView.setOnClickListener(new
 		// MyOnClickListener(CLICK_TYPE_EULA));
