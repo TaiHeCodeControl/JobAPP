@@ -80,6 +80,8 @@ public class BaiduMap_Activity extends Activity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		SDKInitializer.initialize(getApplicationContext());  
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.baidumap_layout);
 		mContext = this;
@@ -229,12 +231,6 @@ public class BaiduMap_Activity extends Activity{
 		}
 	}
 
-	
-	
-	
-	
-	
-	
 	/**
 	 * 添加地图上固定坐标的文字描述
 	 * @param overtext
@@ -329,18 +325,6 @@ public class BaiduMap_Activity extends Activity{
 		// LatLng desLatLng = converter.convert();
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	private SDKReceiver mReceiver;
 	public void TestMapSdkOrNetwork(){
 		// 注册 SDK 广播监听者,使用地图之前需要判断key是否正确和网络是否可用
@@ -354,15 +338,15 @@ public class BaiduMap_Activity extends Activity{
 	
 	@Override
 	protected void onPause() {
-		mMapView.onPause();
 		super.onPause();
+		mMapView.onPause();
 	}
 
 	@Override
 	protected void onResume() {
-		mMapView.onResume();
 		TestMapSdkOrNetwork();
 		super.onResume();
+		mMapView.onResume();
 	}
 
 	@Override
@@ -376,9 +360,8 @@ public class BaiduMap_Activity extends Activity{
 		mLocClient.stop();
 		// 关闭定位图层
 		mBaiduMap.setMyLocationEnabled(false);
-		mMapView.onDestroy();
-		mMapView = null;
 		super.onDestroy();
+		mMapView.onDestroy();
 	}
 
 

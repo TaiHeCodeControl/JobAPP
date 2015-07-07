@@ -27,7 +27,6 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -52,7 +51,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -84,20 +82,7 @@
 
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="rMYbX1xLtCv5v49W5ldqehSu" />
-
-        <!--
-          <meta-data
-          android:name="com.baidu.lbsapi.API_KEY"
-            android:value="KPHgqqe73HcfI7lepG4aqexM" />
-        -->
-
-
-        <!--
-             <meta-data
-            android:name="com.baidu.lbsapi.API_KEY"
-            android:value="p19TNw4HAgklSH5seZSp05bn" />
-        -->
+            android:value="XwI49Ys4zR3P5oS4WfWBx4P0" />
 
         <activity
             android:name="com.parttime.activity.StartActivity"

@@ -69,8 +69,8 @@ public class PartTimeApplication extends Application {
 		initImageLoader(getApplicationContext());
 
 		// 在使用 SDK 各组间之前初始化 context 信息，传入 ApplicationContext
-		SDKInitializer.initialize(this);
-
+		SDKInitializer.initialize(getApplicationContext()); 
+		
 		String externalStorageDir = Environment.getExternalStorageDirectory().toString();
 		File dir = null;
 		String strDir = externalStorageDir + Constant.PARTTIMEJOB_PATH;
