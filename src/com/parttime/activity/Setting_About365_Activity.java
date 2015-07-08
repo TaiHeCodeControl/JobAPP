@@ -56,8 +56,8 @@ public class Setting_About365_Activity extends Activity {
 		//显示蛋壳儿版本信息，位置重复，还未确定位置
 //		VersionNumber.setText(String.format(getResources().getString(R.string.text_show_version_name), versionname));
 
-		// EulaTextView.setOnClickListener(new
-		// MyOnClickListener(CLICK_TYPE_EULA));
+	/*	EulaTextView.setOnClickListener(new
+			 MyOnClickListener(CLICK_TYPE_EULA));*/
 	}
 
 	/**

@@ -54,6 +54,15 @@ import com.parttime.view.MyImageSpinner;
  * @author huxixi
  * 
  */
+
+//TODO
+/**
+ * 该页面应该根据用户在个人详情页面提交的个人基本信息进行初始化，方便用户操作，提高用户体验，
+ * 如果用户没有提交个人的详细信息，就显示默认信息
+ * @author mahuan
+ *
+ * @date 2015-7-8
+ */
 public class Job_Create_Resume extends Activity implements OnGetGeoCoderResultListener {
 
 	public static final int BACK_INT = 1;
