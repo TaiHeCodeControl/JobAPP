@@ -6,6 +6,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
@@ -57,7 +58,7 @@ public class Fragment_HomePage extends Fragment {
 	/* 等待框部分 */
 	private TextView WaitingText;
 	private RelativeLayout WaitingDlg;
-
+	private Activity mActivity;
 	private int[] imageIDs;
 	private ArrayList<ImageView> images;
 	private ArrayList<View> dots;
@@ -82,7 +83,7 @@ public class Fragment_HomePage extends Fragment {
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
+		mActivity = getActivity();
 		View view = inflater.inflate(R.layout.fragment_homepager, container, false);
 
 		sharedPreferences = PreferenceManager.getDefaultSharedPreferences(mContext);
@@ -275,7 +276,7 @@ public class Fragment_HomePage extends Fragment {
 		}
 		ArrayList<HashMap<String, Object>> part_list = parttimeDb.getHotWorkInfo1(mContext);
 
-		Job_ListView_Adapter1 home_adapter = new Job_ListView_Adapter1(getActivity(), part_list, "home");
+		Job_ListView_Adapter1 home_adapter = new Job_ListView_Adapter1(mActivity, part_list, "home");
 
 		center_listview.setAdapter(home_adapter);
 
@@ -326,7 +327,7 @@ public class Fragment_HomePage extends Fragment {
 
 		ArrayList<HashMap<String, Object>> part_list = parttimeDb.getHotWeekerInfo1(mContext);
 
-		ApplyJob_ListView_Adapter home_adapter = new ApplyJob_ListView_Adapter(getActivity(), part_list, "home");
+		ApplyJob_ListView_Adapter home_adapter = new ApplyJob_ListView_Adapter(mActivity, part_list, "home");
 		center_listview.setAdapter(home_adapter);
 
 	}

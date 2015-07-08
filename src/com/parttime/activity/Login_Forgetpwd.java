@@ -210,7 +210,7 @@ public class Login_Forgetpwd extends Activity {
 		new Thread() {
 			@Override
 			public void run() {
-				int numsize = 120;
+				int numsize = 60;
 
 				while (second_flag) {
 					try {
