@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.Window;
@@ -18,6 +19,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.parttime.msg.ErrorMsgSvr;
 import com.parttime.msg.ErrorMsgSvrMsg;
@@ -133,17 +135,28 @@ public class Login_Forgetpwd extends Activity {
 				break;
 			case OBTAIN_VERIFY_INT:
 				forget_map = new HashMap<String, String>();
+				
 				email_str = email_edittext.getText().toString();
-				// username_str=username_edittext.getText().toString();
-				forget_map.put("phone", email_str);
-				// forget_map.put("username",username_str);
-				new GetVcodeTask().execute(forget_map);
+				
+				//判断如果手机号为空，提醒用户输入手机号
+				if(TextUtils.isEmpty(email_str)){
+					Toast.makeText(getApplicationContext(), "请输入手机号", 0).show();
+				}else{
+					// username_str=username_edittext.getText().toString();
+					forget_map.put("phone", email_str);
+					// forget_map.put("username",username_str);
+					obtain_verify_btn.setClickable(false);
+					getCheckNumTime();
+					new GetVcodeTask().execute(forget_map);
+				}
+				
 				break;
 			case OBTAIN_EDIT_INT:
 				String obtain = obtain_edit.getText().toString();
 				if (obtain.equals(Utils.Vcode)) {
 					modify_pwd_relative.setVisibility(View.VISIBLE);
 				} else {
+					Toast.makeText(getApplicationContext(), "请输入正确的验证码", 0).show();
 					modify_pwd_relative.setVisibility(View.GONE);
 				}
 				break;
@@ -184,8 +197,7 @@ public class Login_Forgetpwd extends Activity {
 				Utils.ShowToast(mContext, errmsg);
 				return;
 			}
-			obtain_verify_btn.setClickable(false);
-			getCheckNumTime();
+			
 
 			return;
 		}
@@ -200,6 +212,7 @@ public class Login_Forgetpwd extends Activity {
 				obtain_verify_btn.setText(String.format(mContext.getResources().getString(R.string.text_get_checknum_time), number));
 			} else {
 				obtain_verify_btn.setClickable(true);
+				second_flag = true;
 				obtain_verify_btn.setText(mContext.getResources().getString(R.string.obtain_verfiy1));
 			}
 		};
@@ -262,6 +275,7 @@ public class Login_Forgetpwd extends Activity {
 				Utils.ShowToast(mContext, errmsg);
 				return;
 			}
+			
 			obtain_verify_btn.setClickable(false);
 			getCheckNumTime();
 
