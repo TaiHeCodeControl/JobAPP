@@ -12,10 +12,11 @@
         android:textSize="12sp" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/comment_info"
         android:ems="13"
+
         android:padding="10dp"
         android:id="@+id/comment_content"
         android:text="工作环境很好，工资及时发放" />

@@ -269,7 +269,7 @@ public class SvrOperation {
 			// object.put("email", map.get("email"));
 			object.put("call", map.get("call"));
 			object.put("type", map.get("type"));
-			object.put("avatar", Utils.FileBase64String(map.get("avatar")));
+			//object.put("avatar", Utils.FileBase64String(map.get("avatar")));
 
 			JSONObject result = Submit.Request(SvrInfo.REGITSTER_API, object);
 

@@ -20,9 +20,9 @@ public class ErrorMsgSvr {
 		case SvrInfo.SVR_REGISTER_USER_EXIST:
 			errmsg = R.string.SVR_REGISTER_USER_EXIST;
 			break;
-		case SvrInfo.SVR_REGISTER_AVATAR_FAILED:
-			errmsg = R.string.SVR_REGISTER_AVATAR_FAILED;
-			break;
+//		case SvrInfo.SVR_REGISTER_AVATAR_FAILED:
+//			errmsg = R.string.SVR_REGISTER_AVATAR_FAILED;
+//			break;
 		case SvrInfo.SVR_REGISTER_DATA_FAILED:
 			errmsg = R.string.SVR_REGISTER_DATA_FAILED;
 			break;

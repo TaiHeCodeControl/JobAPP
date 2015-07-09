@@ -204,8 +204,8 @@ public class Register_User extends Activity {
 						// vcode_edit.getText().toString());
 						register_map.put("type", user_sign);
 						register_map.put("call", account_edit.getText().toString());
-						if (!registerHeadPath.equals(""))
-							register_map.put("avatar", registerHeadPath);
+//						if (!registerHeadPath.equals(""))
+//							register_map.put("avatar", registerHeadPath);
 //						if (registerHeadPath == null || registerHeadPath.equals("")) {
 //							Utils.ShowToast(mContext, "头像还没有上传");
 //						} else 
