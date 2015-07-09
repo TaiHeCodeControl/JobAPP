@@ -396,7 +396,6 @@ public class Register_User extends Activity {
 
 			return;
 		}
-
 	}
 
 	public Handler msghandler = new Handler() {
