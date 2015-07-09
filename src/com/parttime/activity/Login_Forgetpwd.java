@@ -267,7 +267,5 @@ public class Login_Forgetpwd extends Activity {
 
 			return;
 		}
-
 	}
-
 }
