@@ -106,7 +106,7 @@ public class LoginActivity extends Activity {
 	 * 注册的textview
 	 * 
 	 */
-	private RelativeLayout register_text;
+	private TextView register_text;
 	/**
 	 * 返回键imageview
 	 * 
@@ -196,7 +196,7 @@ public class LoginActivity extends Activity {
 		account_edit = (ClearEditText) findViewById(R.id.account_edit);
 		pwd_edit = (ClearEditText) findViewById(R.id.pwd_edit);
 		login_forget_pwd = (TextView) findViewById(R.id.login_forget_pwd);
-		register_text = (RelativeLayout) findViewById(R.id.regist_login_btn_block);
+		register_text = (TextView) findViewById(R.id.regist_login_btn);
 		/* 等待对话框部分 */
 		WaitingText = (TextView) findViewById(R.id.Waiting_text);
 		WaitingDlg = (RelativeLayout) findViewById(R.id.Waiting_dlg);
